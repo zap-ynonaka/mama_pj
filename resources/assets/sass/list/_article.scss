@@ -1,0 +1,31 @@
+.list-article{
+  &__list{
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__base{
+    width: 50%;
+    a{
+      display: block;
+      display: flex;
+      flex-direction: column;
+    }
+    p{
+      color: #585858;
+      padding: 8px 16px;
+      font-weight: bold;
+    }
+  }
+  &__pickup{
+  a {
+      display: block;
+  }
+
+  }
+}
+
+
+
+
