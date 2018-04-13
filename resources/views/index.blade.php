@@ -15,6 +15,131 @@
 
     </ul>
   </section>
+
+  <section>
+<h2 class="title_base">3月20日のおすすめ</h2>
+  <div class="list-article__base__pickup">
+    <a href="#">
+      <img src="http://placehold.jp/375x200.png" alt="">
+    </a>
+  </div>
+<ul class="list-article__list">
+  <li class="list-article__base">
+    <a href="#">
+      <div>
+        <img src="http://placehold.jp/186x100.png" alt="">
+      </div>
+      <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+    </a>
+  </li>
+  <li class="list-article__base">
+    <a href="#">
+      <div>
+        <img src="http://placehold.jp/186x100.png" alt="">
+      </div>
+      <p>本当はもっとニコニコなママでいたい、どうしたらいいの？</p>
+    </a>
+  </li>
+</ul>
+</section>
+
+
+<section>
+<h2 class="title_base">これって大丈夫？</h2>
+<ul class="list-article__list">
+  <li class="list-article__base">
+    <a href="#">
+      <div>
+        <img src="http://placehold.jp/186x100.png" alt="">
+      </div>
+        <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+    </a>
+  </li>
+  <li class="list-article__base">
+    <a href="#">
+    <div>
+      <img src="http://placehold.jp/186x100.png" alt="">
+    </div>
+    <p>本当はもっとニコニコなママでいたい、どうしたらいいの？</p>
+    </a>
+  </li>
+  <li class="list-article__base">
+    <a href="#">
+    <div>
+      <img src="http://placehold.jp/186x100.png" alt="">
+    </div>
+    <p>本当はもっとニコニコなママでいたい、どうしたらいいの？</p>
+    </a>
+  </li>
+  <li class="list-article__base">
+    <a href="#">
+    <div>
+      <img src="http://placehold.jp/186x100.png" alt="">
+    </div>
+    <p>本当はもっとニコニコなママでいたい、どうしたらいいの？</p>
+    </a>
+  </li>
+  <li class="list-article__base">
+    <a href="#">
+    <div>
+      <img src="http://placehold.jp/186x100.png" alt="">
+    </div>
+    <p>本当はもっとニコニコなママでいたい、どうしたらいいの？</p>
+    </a>
+  </li>
+</ul>
+</section>
+
+<section>
+  <h2 class="title_base">私っていいママ？</h2>
+  <ul class="list-article__list">
+    <li class="list-article__base">
+      <a href="#">
+        <div>
+          <img src="http://placehold.jp/186x100.png" alt="">
+        </div>
+        <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+      </a>
+    </li>
+    <li class="list-article__base">
+      <a href="#">
+        <div>
+          <img src="http://placehold.jp/186x100.png" alt="">
+        </div>
+        <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+      </a>
+    </li>
+    <li class="list-article__base">
+      <a href="#">
+        <div>
+          <img src="http://placehold.jp/186x100.png" alt="">
+        </div>
+        <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+      </a>
+    </li>
+    <li class="list-article__base">
+      <a href="#">
+        <div>
+          <img src="http://placehold.jp/186x100.png" alt="">
+        </div>
+        <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+      </a>
+    </li>
+    <li class="list-article__base">
+      <a href="#">
+        <div>
+          <img src="http://placehold.jp/186x100.png" alt="">
+        </div>
+        <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+      </a>
+    </li>
+</ul>
+
+<div class="button-base">
+  <button>もっと見る</button>
+</div>
+
+</section>
 </main>
 <br>
 <br>
