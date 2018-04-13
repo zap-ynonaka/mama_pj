@@ -1,7 +1,6 @@
 @extends('layout.app.master')
 @section('content')
 
-
   <section class="l-section">
     <div class="l-content">
       <h3>ログイン確認</h3>
@@ -12,7 +11,6 @@
       <form method="post" class="o-formGroup" id="js-generalForm">
         {{ csrf_field() }}
         <input type="hidden" name="sns" value="none">
-        <input type="hidden" name="query_string" value="{{$query_string ?? ''}}">
         <div class="m-formControl">
           <div class="m-formControl__field">
             <input type="email" name="email" id="email" class="a-input" placeholder="メールアドレスを入力" required>

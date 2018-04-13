@@ -5,9 +5,4 @@
 <p>
 {!! $err_message !!}
 </p>
-{{--
-<ul>
-  <li><a href="/">ホーム</a></li>
-</ul>
---}}
 @endsection

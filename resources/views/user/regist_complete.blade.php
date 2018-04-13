@@ -7,7 +7,7 @@
   <span class="common-color-01">メールアドレス、パスワードの登録が完了しました</span><br>
   <br>
     さっそく占う！<br>
-    <a href="/user/myprofile"><span>プロフィール登録へ&nbsp;></span></a>
+    <a href="/user/my_profile"><span>プロフィール登録へ&nbsp;></span></a>
   </div>
 
 @endsection

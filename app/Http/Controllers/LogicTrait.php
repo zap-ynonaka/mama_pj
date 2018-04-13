@@ -40,8 +40,8 @@ trait LogicTrait
 //        $this->serviceKey = 'contents_pj';
 //        $this->auth_id = "cocoloni";
 //        $this->password = "plus";
-//        $this->baseUrl = Consts::LOGIC_API_URL[env('APP_ENV')].'/logicsrv2/zapi/v1.0';
-        // echo env('APP_ENV')."|".Consts::LOGIC_API_URL[env('APP_ENV')];
+        $this->baseUrl = Consts::LOGIC_API_URL[env('APP_ENV')].'/logicsrv2/zapi/v1.0';
+echo env('APP_ENV')."|".Consts::LOGIC_API_URL[env('APP_ENV')];
     }
 
     /**
@@ -387,7 +387,7 @@ trait LogicTrait
         } elseif (isset($ret->error_code)) {
             logger(sprintf("[ERROR] LogicBase : %s %s \n", date("Y-m-d H:i:s"), sprintf("%d: %s", $ret->error_code, $ret->error_msg)));
         } else {
-            // logger(sprintf("[ERROR] LogicBase : %s %s \n", date("Y-m-d H:i:s"), sprintf("%d: %s %s %s", $ret->status, $ret->error, $ret->message, $ret->path)));
+            logger(sprintf("[ERROR] LogicBase : %s %s \n", date("Y-m-d H:i:s"), sprintf("%d: %s %s %s", $ret->status, $ret->error, $ret->message, $ret->path)));
         }
         return $this->status;
     }
@@ -398,7 +398,7 @@ trait LogicTrait
      */
     public function getResult()
     {
-        // return $this->result;
+        return $this->result;
     }
 
     /**

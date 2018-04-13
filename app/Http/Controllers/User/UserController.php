@@ -12,6 +12,7 @@ use Mail;                               // メール送信
 use App\Http\Controllers\LogicTrait;    // ロジック
 use App\Models\Users;                   // DB ユーザー
 use App\Models\ChangeStatusReissueKeys; // DB ユーザー情報変更
+use App\Models\Favorites;               // DB お気に入り
 use Redirect;                           // エラー時リダイレクト
 use Session;                            // セッション
 
@@ -24,45 +25,61 @@ class UserController extends Controller
     protected $URLParam;    // 画面共通項目 url query用
     use LogicTrait;    // ロジック接続関連
 
+
+    public function __construct()
+    {
+        // 認証共通処理 app/Http/Middleware/ZapAuth.php
+        $this->middleware('zap_auth');
+
+        // 値をコントローラー内変数へ受け渡し
+        $this->middleware(function ($request, $next) {
+
+            $this->hash = $request->all();
+            $this->user = $request->user;
+            $this->hash['member'] = $request->user ? 1 : 0;  // 会員フラグ
+
+            // デフォルト出力内容
+            $this->hash['name']         = Consts::CONTENT_TITLE;    // コンテンツタイトル
+
+            // 戻り遷移時必要パラメータ定義
+            $inputparam = array('cpno');
+            $tmp = array();
+            foreach ($inputparam as $key) {
+                if(isset($request[$key])) $tmp[$key] = $request[$key];
+            }
+            $this->URLParam = http_build_query($tmp);          // 画面共通項目 url query用  (モジュール内で使用)
+
+
+            $this->hash['googleplusClientId']   = Consts::GOOGLE_CLIENT_ID;                         // google認証用clientID
+            $this->hash['g_cookiepolicy']       = url('/');                                         // google cookie保存対象url
+            $this->hash['facebookAppId']        = Consts::FACEBOOK_ID;                              // facebook認証用ID
+            $this->hash['facebookAppVersion']   = Consts::FACEBOOK_VER;                             // facebook認証用ver
+            $this->hash['yahooAppId']           = Consts::YAHOO_ID;                                 // yahoo認証用ID
+            $this->hash['yahooRegisterUrl']     = rawurlencode(url('/').'/user/yahoo_register'.$this->getURLParam()); // yahoo認証用URL 登録
+            $this->hash['yahooLoginUrl']        = rawurlencode(url('/').'/user/yahoo_login'.$this->getURLParam());    // yahoo認証用URL ログイン
+            $this->hash['yahooChangeUrl']       = rawurlencode(url('/').'/user/change'.$this->getURLParam());         // yahoo認証用URL 変更 !!!
+
+
+            // 戻り遷移時必要パラメータ定義
+            $inputparam = array('cpno');
+            $tmp = array();
+            foreach ($inputparam as $key) {
+                if(isset($request[$key])) $tmp[$key] = $request[$key];
+            }
+            $this->URLParam = http_build_query($tmp);          // 画面共通項目 url query用  (モジュール内で使用)
+
+            return $next($request);
+        });
+    }
+
     // 前処理
     protected function _pre($request, $member=0)
     {
-        // 全て取得
-        $this->hash = $request->all();
-
-        // デフォルト出力内容
-        $this->hash['name'] = Consts::CONTENT_TITLE;    // コンテンツタイトル
-
-        $this->hash['googleplusClientId']   = Consts::GOOGLE_CLIENT_ID;                         // google認証用clientID
-        $this->hash['g_cookiepolicy']       = url('/');                                         // google cookie保存対象url
-        $this->hash['facebookAppId']        = Consts::FACEBOOK_ID;                              // facebook認証用ID
-        $this->hash['facebookAppVersion']   = Consts::FACEBOOK_VER;                             // facebook認証用ver
-        $this->hash['yahooAppId']           = Consts::YAHOO_ID;                                 // yahoo認証用ID
-        $this->hash['yahooRegisterUrl']     = rawurlencode(url('/').'/user/yahoo_register'.$this->getURLParam()); // yahoo認証用URL 登録
-        $this->hash['yahooLoginUrl']        = rawurlencode(url('/').'/user/yahoo_login'.$this->getURLParam());    // yahoo認証用URL ログイン
-        $this->hash['yahooChangeUrl']       = rawurlencode(url('/').'/user/change'.$this->getURLParam());         // yahoo認証用URL 変更 !!!
-
-
-        // 戻り遷移時必要パラメータ定義
-        $inputparam = array('cpno');
-        $tmp = array();
-        foreach ($inputparam as $key) {
-            if(isset($request[$key])) $tmp[$key] = $request[$key];
-        }
-        $this->URLParam = http_build_query($tmp);          // 画面共通項目 url query用  (モジュール内で使用)
-
-        // ユーザー認証 (セッションあればユーザー情報取得)
-        if(Session::has('_access_token')) {
-            $this->user = Users::where([['access_token', Session::get('_access_token')],['status', 1]])->first();
-        }
-
         // 会員専用でセッション無し( or 期限切れ) or トークン該当ユーザー無し -> ログイン画面へ
         if($member && !$this->user) {
             session(['_flash_message' => 'E1014']);
-            Redirect::to('/user/login'.$this->getURLParam('callback_url='.urlencode('/'.$request->path())))->send();
-            return '';
+            Redirect::to('/user/login'.'?callback_url='.urlencode($_SERVER['REQUEST_URI']))->send();
         }
-
         return '';
     }
 
@@ -233,7 +250,7 @@ class UserController extends Controller
     // 退会
     public function unregist(Request $request)
     {
-        $this->_pre($request, 1);  // 前処理
+        $this->_pre($request, 1);  // 前処理 会員限定
 
         // POST退会処理時
         if($_SERVER["REQUEST_METHOD"] == 'POST') {
@@ -254,6 +271,28 @@ echo date("Y-m-d H:i:s");
 
         return view('user.unregist')->with($this->hash);
     }
+
+    // お気に入り一覧
+    public function favorite_list(Request $request)
+    {
+        $this->_pre($request, 1);  // 前処理 会員限定
+
+        // お気に入り一覧取得
+        $this->hash['favorite'] = Favorites::where([['users_id', $this->user->id]])->get();
+
+        $tmp = array();
+        foreach ($this->hash['favorite'] as $f) {
+
+            $f->result_text = json_decode($f->result_text, true) ?? '';
+            if(isset($f->result_text['summary'])) $f->summary = $f->result_text['summary'];
+        }
+
+        // menusとの紐付け、結果textの編集が残り!!!
+
+        return view('user.favorite_list')->with($this->hash);
+    }
+
+
 
     // ログイン
     public function login(Request $request)
@@ -279,15 +318,15 @@ echo date("Y-m-d H:i:s");
                 session(['_access_token' => $access_token]);
 
                 // リダイレクト (指定先か topへ) クエリーパラメータも保持して渡す
-                $queryString = Session::get('SESSION_KEY_SNS_LOGIN_QUERY_STRING');
-                Session::forget('SESSION_KEY_SNS_LOGIN_QUERY_STRING');
-                Redirect::to(($this->hash['callback_url'] ?? '/').$this->getURLParam($queryString))->send();
+                $callback_url = Session::get('SESSION_KEY_CALLBACK');
+                Session::forget('SESSION_KEY_CALLBACK');
+                Redirect::to(($callback_url ?? '/'))->send();
                 return '';
             }
         }
 
         // クエリーパラメータ取得
-        session(['SESSION_KEY_SNS_LOGIN_QUERY_STRING' => http_build_query($request->all())]);
+        session(['SESSION_KEY_CALLBACK' => @$this->hash['callback_url']]);
 
         $this->_FlashMssage2ErrorMessage(); // エラー出力
 

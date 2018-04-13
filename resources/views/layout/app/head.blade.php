@@ -3,7 +3,8 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 {{-- 会員登録用 css & js --}}
-<link rel="stylesheet" type="text/css" href="/css/app.css">
+<link rel="stylesheet" type="text/css" href="/css/plus-custom.css">
+<link rel="stylesheet" type="text/css" href="/css/plus-style.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 <script src="/js/fingerprint.js"></script>  {{-- ゲスト集計用 ユニークID取得機能 --}}
