@@ -1,0 +1,26 @@
+.tab-content {
+  li {
+    display: none;
+    padding: 24px 16px 0;
+    color: #585858;
+    background-color: #fff;
+    &.js-active {
+      display: block;
+    }
+  }
+
+  &__result {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  &__recommend {
+    margin-bottom: 24px;
+  }
+  h3.title-base {
+    color: #ff8e09;
+    background-color: #fff;
+  }
+
+
+}

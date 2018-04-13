@@ -12,15 +12,28 @@
 //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 // }
 
-li {
-  list-style: none;
+* {margin: 0;padding: 0;box-sizing: border-box;letter-spacing: 1px;line-height: 1.6;}
+img {display: block;width: 100%;}
+ul, li {list-style-type: none;}
+button{background-color: transparent;border: none;cursor: pointer;outline: none;appearance: none;}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
 }
 
+section {background-color: #fff;padding-bottom: 24px;}
 
 @import "base/_base.scss";
+
 @import "button/_base.scss";
-@import "list/_article.scss";
+
 @import "title/_base.scss";
 
+@import "list/_article.scss";
+@import "list/_recomend.scss";
+
+@import "tab/_list.scss";
+@import "tab/_content.scss";
 
 

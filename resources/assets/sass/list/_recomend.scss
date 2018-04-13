@@ -1,0 +1,27 @@
+.list-recommend{
+  &__base {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    li{
+      border-bottom: 1px solid #e7e7e7;
+      a{
+        display: flex;
+        div  {
+          width: 40%;
+        }
+        p{
+          padding: 0 12px;
+          display: flex;
+          align-items: center;
+          color: #585858;
+          font-weight: bold;
+          flex: 1;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+
