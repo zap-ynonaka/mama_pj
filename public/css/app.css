@@ -1,3 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: #fff;
+  padding-bottom: 24px;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
@@ -2767,7 +2806,6 @@ p {
 }
 
 a {
-  color: #e96a7b;
   text-decoration: none;
 }
 
@@ -5118,5 +5156,196 @@ img.security_code-img {
 
 h2.change-success {
   color: #6acd6a;
+}
+
+.button-base {
+  margin: 0 auto 12px;
+  width: 50%;
+}
+
+.button-base a,
+.button-base button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 2px;
+  height: 36px;
+  font-weight: bold;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #1e0111;
+  border: solid 0.5px #ffcd09;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffcd09;
+          box-shadow: 0 1px 0 0 #ffcd09;
+  border-radius: 4px;
+}
+
+.title-base {
+  color: #1e0111;
+  background-color: #fdffec;
+  font-size: 14px;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.list-article__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list-article__base {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list-article__base li {
+  width: 50%;
+}
+
+.list-article__base a {
+  display: block;
+}
+
+.list-article__base p {
+  color: #585858;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.list-article__pickup a {
+  display: block;
+}
+
+.list-article__base li.pickup {
+  width: 100%;
+}
+
+.list-article__base li.pickup a {
+  position: relative;
+}
+
+.list-article__base li.pickup p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(71, 67, 53, 0.4)), to(transparent));
+  background: linear-gradient(to top, rgba(71, 67, 53, 0.4), transparent);
+  width: 100%;
+  color: #ffffff;
+  text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.list-recommend__base {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.list-recommend__base li {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.list-recommend__base li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-recommend__base li a div {
+  width: 40%;
+}
+
+.list-recommend__base li a p {
+  padding: 0 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #585858;
+  font-weight: bold;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 14px;
+}
+
+.tab-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e5d9cd;
+}
+
+.tab-list li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+  border-top: 2px solid #e5d9cd;
+  font-weight: 700;
+  color: #585858;
+}
+
+.tab-list li.js-active {
+  border-top-color: #ff8e09;
+  background-color: #fff;
+  color: #1e0111;
+}
+
+.tab-content li {
+  display: none;
+  padding: 24px 16px 0;
+  color: #585858;
+  background-color: #fff;
+}
+
+.tab-content li.js-active {
+  display: block;
+}
+
+.tab-content__result {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.tab-content__recommend {
+  margin-bottom: 24px;
+}
+
+.tab-content h3.title-base {
+  color: #ff8e09;
+  background-color: #fff;
 }
 

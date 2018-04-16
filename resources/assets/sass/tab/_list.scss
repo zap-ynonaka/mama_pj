@@ -1,0 +1,19 @@
+.tab-list {
+  display: flex;
+  background-color: #e5d9cd;
+  li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    border-top: 2px solid #e5d9cd;
+    font-weight: 700;
+    color: #585858;
+    &.js-active {
+      border-top-color: #ff8e09;
+      background-color: #fff;
+      color: #1e0111;
+    }
+  }
+}

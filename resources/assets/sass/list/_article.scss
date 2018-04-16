@@ -6,11 +6,13 @@
     flex-wrap: wrap;
   }
   &__base{
-    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 50%;
+    }
     a{
       display: block;
-      display: flex;
-      flex-direction: column;
     }
     p{
       color: #585858;
@@ -27,5 +29,16 @@
 }
 
 
-
-
+.list-article__base li.pickup {
+  width: 100%;
+  a {position: relative;}
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(71, 67, 53, 0.4), transparent);
+    width: 100%;
+    color: #ffffff;
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+}
