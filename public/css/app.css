@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -28,13 +30,41 @@ button {
 }
 
 main {
-  max-width: 480px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 section {
   background-color: #fff;
   padding-bottom: 24px;
+}
+
+header.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.header > div {
+  width: 50px;
+}
+
+header.header > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header.header > div:nth-of-type(2) a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -5347,5 +5377,45 @@ h2.change-success {
 .tab-content h3.title-base {
   color: #ff8e09;
   background-color: #fff;
+}
+
+.second-selectList a {
+  display: block;
+}
+
+.second-selectList p {
+  color: #585858;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.nav-breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #585858;
+  font-weight: bold;
+}
+
+.nav-breadcrumb li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-breadcrumb li:after {
+  content: " \FF1E   ";
+  position: absolute;
+  top: 0px;
+  right: -26px;
+  bottom: 0;
+  margin: auto;
+  height: 22px;
+}
+
+.nav-breadcrumb li:last-child:after {
+  content: "";
 }
 

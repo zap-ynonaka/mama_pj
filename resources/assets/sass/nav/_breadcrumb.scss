@@ -1,0 +1,23 @@
+.nav-breadcrumb{
+  display: flex;
+  align-items: center;
+  color: #585858;
+  font-weight: bold;
+  li{
+    position: relative;
+    margin-right: 20px;
+    &:after{
+        content:" ＞ ";
+        position: absolute;
+        top: 0px;
+        right: -26px;
+        bottom: 0;
+        margin: auto;
+        height: 22px;
+    }
+    &:last-child:after{
+      content:"";
+    }
+  }
+}
+
