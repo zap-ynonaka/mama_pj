@@ -1,0 +1,36 @@
+.footer {
+  background-color: #fdffec;
+  ul {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  li {
+    min-width: 120px;
+    position: relative;
+    a {
+      color: #555;
+    }
+    &:nth-of-type(2n):after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 16px;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: -12px;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &-copy {
+    color: #fff;
+    background-color: #ff8e09;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+}

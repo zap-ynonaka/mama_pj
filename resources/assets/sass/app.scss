@@ -22,24 +22,20 @@ main {
   margin: 0 auto;
 }
 
-section {background-color: #fff;padding-bottom: 24px;}
-
-header.header {
-  display: flex;
-  > div {
-    width: 50px;
-    &:nth-of-type(2) {
-      flex: 1;
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  }
+section {
+  padding-top: 120px;
+  background-color: #f7f7f7;
+  position: relative;
+  padding-bottom: 24px;
 }
 
+
 @import "base/_base.scss";
+
+@import "header/_header.scss";
+@import "footer/_footer.scss";
+
+@import "content/_space.scss";
 
 @import "button/_base.scss";
 

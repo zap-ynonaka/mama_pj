@@ -5,3 +5,52 @@
   padding: 8px 16px;
   font-weight: bold;
 }
+
+h2.title-base {
+  position: absolute;
+  padding: 0;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 260px;
+  margin: auto;
+  z-index: 3;
+
+  div {
+    background-image: url('/images/test.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100px;
+    width: 260px;
+    margin: 0 auto;
+    span {
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100px;
+      line-height: 32px;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    top: 0;
+    border-bottom: solid 3px #FF8E08;
+    width: 140px;
+    height: 1px;
+    right: 0;
+    left: 0;
+    border-radius: 5px;
+  }
+
+}
+
+h3.title-base {
+  color: #ff8e09;
+  background-color: #fff;
+}
