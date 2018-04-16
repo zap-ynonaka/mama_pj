@@ -15,13 +15,13 @@
   <div class="content-space__top">
     <ul class="list-article__base">
       <li class="pickup">
-        <a href="#">
+        <a href="/contents/list/8">
           <div><img src="http://placehold.jp/375x200.png" alt=""></div>
           <p>他人への感謝の気持ち、どうやって育ててあげればいい？a</p>
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/8">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -29,7 +29,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/8">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -58,7 +58,7 @@
           <p>子供のパジャマすたがの写真</p>
         </div>
         <div class="button-base">
-          <a href="#">今週の運勢を見る</a>
+        <a href="/contents/list/2">今週の運勢を見る</a>
         </div>
       </li>
       
@@ -105,7 +105,7 @@
   <div class="content-space__top">
     <ul class="list-recommend__base">
       <li class="">
-        <a href="#">
+        <a href="/contents/list/8">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -113,7 +113,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/8">
         <div>
           <img src="http://placehold.jp/375x200.png" alt="">
         </div>
@@ -121,7 +121,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/8">
         <div>
           <img src="http://placehold.jp/375x200.png" alt="">
         </div>
@@ -129,7 +129,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/8">
         <div>
           <img src="http://placehold.jp/375x200.png" alt="">
         </div>
@@ -137,7 +137,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/8">
         <div>
           <img src="http://placehold.jp/375x200.png" alt="">
         </div>
@@ -147,7 +147,7 @@
     </ul>
 
     <div class="button-base">
-      <button>もっと見る</button>
+      <a href="/contents/list/8">もっと見る</a>
     </div>
   </div>
 </section>
@@ -157,7 +157,7 @@
   <div class="content-space__top">
     <ul class="list-article__base">
       <li class="">
-        <a href="#">
+        <a href="/contents/list/4">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -165,7 +165,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/4">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -173,7 +173,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/4">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -181,7 +181,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/4">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -189,7 +189,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/4">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -214,7 +214,7 @@
   <div class="content-space__top">
     <ul class="list-article__base">
       <li class="">
-        <a href="#">
+        <a href="/contents/list/7">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -222,7 +222,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/7">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -230,7 +230,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/7">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -238,7 +238,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/7">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
@@ -246,7 +246,7 @@
         </a>
       </li>
       <li class="">
-        <a href="#">
+        <a href="/contents/list/7">
           <div>
             <img src="http://placehold.jp/375x200.png" alt="">
           </div>
