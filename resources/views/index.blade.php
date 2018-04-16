@@ -12,7 +12,7 @@
     <li class="pickup">
       <a href="#">
         <div><img src="http://placehold.jp/375x200.png" alt=""></div>
-        <p>他人への感謝の気持ち、どうやって育ててあげればいい？</p>
+        <p>他人への感謝の気持ち、どうやって育ててあげればいい？a</p>
       </a>
     </li>
     <li class="">
