@@ -5,10 +5,12 @@
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    padding: 20px;
   }
   li {
     min-width: 120px;
     position: relative;
+    margin: 10px;
     a {
       color: #555;
     }
@@ -17,7 +19,7 @@
       display: block;
       width: 1px;
       height: 16px;
-      background-color: #000;
+      background-color: #585857;
       position: absolute;
       top: 0;
       left: -12px;

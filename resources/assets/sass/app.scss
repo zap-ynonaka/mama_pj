@@ -29,6 +29,16 @@ section {
   padding-bottom: 24px;
 }
 
+.top__{
+  &famillyImg{
+    background-image: url(/images/top/topillust.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 50% 10px;
+  }
+}
+
+
 
 @import "base/_base.scss";
 
@@ -36,6 +46,7 @@ section {
 @import "footer/_footer.scss";
 
 @import "content/_space.scss";
+@import "content/_catch.scss";
 
 @import "button/_base.scss";
 
@@ -50,4 +61,6 @@ section {
 @import "second/_selectList.scss";
 
 @import "nav/_breadcrumb.scss";
+
+@import "icon/_base.scss";
 
