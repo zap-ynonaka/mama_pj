@@ -1,19 +1,29 @@
 .tab-list {
   display: flex;
-  background-color: #e5d9cd;
+  justify-content: space-around;
+  position: relative;
+  z-index: 3;
   li {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 42px;
-    border-top: 2px solid #e5d9cd;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #ff8e09;
     font-weight: 700;
-    color: #585858;
-    &.js-active {
-      border-top-color: #ff8e09;
-      background-color: #fff;
-      color: #1e0111;
+    color: #1e0111;
+    border-radius: 50%;
+    background-color: #fff;
+    &.js-active span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 68px;
+      height: 68px;
+      border: 2px solid #fff;
+      background-color: #ff8e0b;
+      border-radius: 50%;
+      color: #fff;
     }
   }
 }

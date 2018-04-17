@@ -1,0 +1,10 @@
+.content-space {
+  &__top {
+    padding-top: 64px;
+    background-color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    z-index: 1;
+  }
+}

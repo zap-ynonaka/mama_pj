@@ -1,4 +1,11 @@
 .tab-content {
+  padding-top: 35px;
+  border: 1px solid #ff8e09;
+  border-radius: 10px;
+  position: relative;
+  top: -35px;
+  z-index: 1;
+  box-shadow: 2px 2px #ff8e09;
   li {
     display: none;
     padding: 24px 16px 0;
@@ -17,10 +24,5 @@
   &__recommend {
     margin-bottom: 24px;
   }
-  h3.title-base {
-    color: #ff8e09;
-    background-color: #fff;
-  }
-
 
 }
