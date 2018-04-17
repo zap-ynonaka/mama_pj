@@ -10,7 +10,7 @@
   <div><a href="/user/mypage"><img src="https://placehold.jp/26/3d4070/ffffff/100x100.png" alt="マイページ"></a></div>
 </header>
 <main>
-<section>
+<section class="top__famillyImg">
   <h2 class="title-base"><div><span>test3月20日<br>今月のおすすめ</span></span></h2>
   <div class="content-space__top">
     <ul class="list-article__base">
@@ -54,7 +54,7 @@
           難しい選択を迫られそうです。返事を待ってもらうこともできますが、早く前に進みたいと思う場合は、自分の胸に聞いて決断してください。きっと自由を手に入れられます。また、これまで周りにいなかったタイプの人と縁がある日です。男女、年齢、職業などを超えて、同じ価値観で結ばれた仲間としてのおつき合いが始まりそう。さまざまな可能性があって、思いのままに生きることの素晴らしさを、実際の行動を通じて教えてもらえるでしょう。
         </div>
         <div class="tab-content__recommend">
-          <h3 class="title-base">今日のラッキーフォト</h3>
+          <h3 class="title-base icon-cameraImg">今日のラッキーフォト</h3>
           <p>子供のパジャマすたがの写真</p>
         </div>
         <div class="button-base">
@@ -94,8 +94,21 @@
 
 <section>
   <h2 class="title-base"><div><span>いつでも知りたい<br>Kid's ごきげん予報</span></span></h2>
-  <div class="content-space__top">
-    ここにコンテンツー！
+  <div class="content-space__top yellowStripe">
+    <div class="content-catch">
+      <div>
+        <h3>子どもの性格診断</h3>
+        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
+      </div>
+      <div>
+        <h3>子ども同士について</h3>
+        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
+      </div>
+      <div class="content-catch__button">
+          <div>ログイン</div>
+          <div>ユーザー登録</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -103,7 +116,7 @@
 <section>
   <h2 class="title-base"><div><span>もしかして私だけ？<br>これって大丈夫？</span></span></h2>
   <div class="content-space__top">
-    <ul class="list-recommend__base">
+    <ul class="list-recommend__base outerside">
       <li class="">
         <a href="/contents/list/8">
           <div>
@@ -203,8 +216,21 @@
 
 <section>
   <h2 class="title-base"><div><span>いつでも知りたい<br>Kid's ごきげん予報</span></span></h2>
-  <div class="content-space__top">
-    ここにコンテンツー！
+  <div class="content-space__top yellowStripe">
+    <div class="content-catch">
+      <div>
+        <h3>子どもの性格診断</h3>
+        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
+      </div>
+      <div>
+        <h3>子ども同士について</h3>
+        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
+      </div>
+      <div class="content-catch__button">
+          <div>ログイン</div>
+          <div>ユーザー登録</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -322,4 +348,3 @@ fileZilla等で mama-dev.ura.pga.jpホストへ接続、ファイル転送で実
 
 </body>
 </html>
-

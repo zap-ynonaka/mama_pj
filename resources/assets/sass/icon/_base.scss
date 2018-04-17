@@ -1,0 +1,15 @@
+.icon-{
+  &cameraImg:after{
+    content: "";
+    background-image: url(/images/top/rectangle-1347.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: -10px;
+    width: 22px;
+    height: 20px;
+  }
+}

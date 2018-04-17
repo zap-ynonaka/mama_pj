@@ -41,6 +41,13 @@ section {
   padding-bottom: 24px;
 }
 
+.top__famillyImg {
+  background-image: url(/images/top/topillust.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 50% 10px;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
@@ -5228,11 +5235,13 @@ header.header > div:nth-of-type(2) a span {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 20px;
 }
 
 .footer li {
   min-width: 120px;
   position: relative;
+  margin: 10px;
 }
 
 .footer li a {
@@ -5244,7 +5253,7 @@ header.header > div:nth-of-type(2) a span {
   display: block;
   width: 1px;
   height: 16px;
-  background-color: #000;
+  background-color: #585857;
   position: absolute;
   top: 0;
   left: -12px;
@@ -5268,12 +5277,133 @@ header.header > div:nth-of-type(2) a span {
 }
 
 .content-space__top {
-  padding-top: 64px;
+  padding-top: 94px;
   background-color: #fff;
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
   z-index: 1;
+}
+
+.content-space__top.yellowStripe {
+  content: "";
+  background-image: url(http://placehold.jp/fceec0/ffffff/370x150.png);
+  background-repeat: repeat-y;
+  background-size: auto;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.content-catch {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 0 6px 0 rgba(255, 142, 9, 0.7);
+          box-shadow: 0 0 6px 0 rgba(255, 142, 9, 0.7);
+  padding: 16px;
+}
+
+.content-catch > div:nth-of-type(1):before {
+  content: "";
+  background-image: url(/images/baby-boy.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -60px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  width: 52px;
+  height: 52px;
+}
+
+.content-catch > div:nth-of-type(1):after {
+  content: "";
+  background-image: url(/images/top/pick.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -22px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  width: 300px;
+  height: 31px;
+}
+
+.content-catch > div:nth-of-type(2) {
+  padding-top: 30px;
+}
+
+.content-catch > div:nth-of-type(2):before {
+  content: "";
+  background-image: url(/images/kids-boy.png), url(/images/kids-girl.png);
+  background-position: 0px 0px,60px 0px,60px 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -14px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  width: 120px;
+  height: 52px;
+}
+
+.content-catch > div:nth-of-type(2):after {
+  content: "";
+  background-image: url(/images/top/pick.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 24px;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  width: 300px;
+  height: 31px;
+}
+
+.content-catch div {
+  position: relative;
+}
+
+.content-catch div h3 {
+  font-size: 18px;
+  color: #1e0111;
+  text-align: center;
+  font-weight: bold;
+  margin: 16px 0px;
+}
+
+.content-catch div p {
+  color: #585858;
+}
+
+.content-catch__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-catch__button div:nth-of-type(1) {
+  padding: 12px 38px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #ff8e09;
+}
+
+.content-catch__button div:nth-of-type(2) {
+  border-radius: 3px;
+  background-color: #ff8e09;
+  -webkit-box-shadow: 0 2px 0 0 #d57300;
+          box-shadow: 0 2px 0 0 #d57300;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 32px;
 }
 
 .button-base {
@@ -5365,8 +5495,13 @@ h2.title-base:after {
 }
 
 h3.title-base {
+  font-size: 16px;
   color: #ff8e09;
+  font-weight: bold;
+  color: #1e0111;
   background-color: #fff;
+  position: relative;
+  margin-left: 10px;
 }
 
 .list-article__list {
@@ -5413,17 +5548,6 @@ h3.title-base {
   position: relative;
 }
 
-.list-article__base li.pickup p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(71, 67, 53, 0.4)), to(transparent));
-  background: linear-gradient(to top, rgba(71, 67, 53, 0.4), transparent);
-  width: 100%;
-  color: #ffffff;
-  text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.5);
-}
-
 .list-recommend__base {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5465,6 +5589,11 @@ h3.title-base {
   font-size: 14px;
 }
 
+.outerside {
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
 .tab-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5492,6 +5621,21 @@ h3.title-base {
   color: #1e0111;
   border-radius: 50%;
   background-color: #fff;
+  position: relative;
+}
+
+.tab-list li:after {
+  content: "";
+  background-image: url(/images/top/combined-shape.png);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -10px;
+  left: -19px;
 }
 
 .tab-list li.js-active span {
@@ -5581,5 +5725,19 @@ h3.title-base {
 
 .nav-breadcrumb li:last-child:after {
   content: "";
+}
+
+.icon-cameraImg:after {
+  content: "";
+  background-image: url(/images/top/rectangle-1347.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -10px;
+  width: 22px;
+  height: 20px;
 }
 
