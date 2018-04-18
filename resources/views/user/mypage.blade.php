@@ -4,33 +4,30 @@
 <?php $gender_st = ['f' => '女性', 'm' => '男性']; ?>
 <?php $blood_st = [0 => '不明', 1 => 'A', 2 => 'B', 3 => 'O', 4 => 'AB']; ?>
 
-<h1>マイページ</h1>
+<!-- <h1>マイページ</h1> -->
+<h1 class="title-base"><div><span>マイページ</span></div></h1>
 <section>
-  <h2>プロフィール設定</h2>
-  <div class="content-space__top">
-    <ul>
-      <li><a href="/user/partner_profile">あなたのプロフィール確認・変更</a></li>
+  <h2 class="title-sub">プロフィール設定</h2>
+    <ul class="list-text">
+      <li><a href="/user/my_profile">あなたのプロフィール確認・変更</a></li>
       <li><a href="/user/partner_profile">相手のプロフィール確認・変更</a></li>
       <li><a href="/user/children">子どもの情報を追加する</a></li>
     </ul>
-  </div>
 
-  <h2>登録情報</h2>
-  <div class="content-space__top">
-    <ul>
+  <h2 class="title-sub">登録情報</h2>
+    <ul class="list-text">
       <li><a href="/user/favorite_list">お気に入りの占い結果</a></li>
       <li><a href="/user/change_email">メールアドレス変更</a></li>
       <li><a href="/user/change_password">パスワード変更</a></li>
     </ul>
-  </div>
 
-  <h2>その他</h2>
-  <div class="content-space__top">
-    <ul>
+  <h2 class="title-sub">その他</h2>
+    <ul class="list-text">
       <li><a href="/user/partner_profile">ログアウト</a></li>
     </ul>
-  </div>
 </section>
+
+<div class="page-back"><a href="">戻る</a></div>
 
 あなたの情報<br>
 @if(@$nickname)
