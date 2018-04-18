@@ -1,0 +1,19 @@
+.button-registration{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+div:nth-of-type(1){
+  padding: 12px 38px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #ff8e09;
+}
+div:nth-of-type(2){
+  border-radius: 3px;
+  background-color: #ff8e09;
+  box-shadow: 0 2px 0 0 #d57300;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 32px;
+}
+}

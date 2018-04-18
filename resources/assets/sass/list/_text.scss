@@ -1,0 +1,30 @@
+.list-text{
+  li{
+    line-height: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #e7e7e7;
+    a{
+      padding: 16px;
+      color: #141414;
+      display: block;
+      position: relative;
+      &:after{
+        content: '';
+        width: 10px;
+        height: 10px;
+        border: 0px;
+        border-top: solid 2px #605651;
+        border-right: solid 2px #605651;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 18px;
+        margin: auto;
+      }
+    }
+  }
+}

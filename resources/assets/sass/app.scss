@@ -38,6 +38,25 @@ section {
   }
 }
 
+.page-back{
+  text-decoration: underline;
+  padding: 0px 0px 16px 28px;
+  position: relative;
+  color: #585858;
+  :before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 0px;
+    border-top: solid 1px #605651;
+    border-right: solid 1px #605651;
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 19%;
+    left: 14px;
+  }
+}
+
 
 
 @import "base/_base.scss";
@@ -49,11 +68,13 @@ section {
 @import "content/_catch.scss";
 
 @import "button/_base.scss";
+@import "button/_registration.scss";
 
 @import "title/_base.scss";
 
 @import "list/_article.scss";
 @import "list/_recomend.scss";
+@import "list/_text.scss";
 
 @import "tab/_list.scss";
 @import "tab/_content.scss";

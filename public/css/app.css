@@ -48,6 +48,27 @@ section {
   background-position: 50% 10px;
 }
 
+.page-back {
+  text-decoration: underline;
+  padding: 0px 0px 16px 28px;
+  position: relative;
+  color: #585858;
+}
+
+.page-back :before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 0px;
+  border-top: solid 1px #605651;
+  border-right: solid 1px #605651;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  position: absolute;
+  top: 19%;
+  left: 14px;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
@@ -5299,15 +5320,16 @@ header.header > div:nth-of-type(2) a span {
   -webkit-box-shadow: 0 0 6px 0 rgba(255, 142, 9, 0.7);
           box-shadow: 0 0 6px 0 rgba(255, 142, 9, 0.7);
   padding: 16px;
+  position: relative;
 }
 
-.content-catch > div:nth-of-type(1):before {
+.content-catch.child1:before {
   content: "";
-  background-image: url(/images/baby-boy.png);
+  background-image: url(/images/icon_kids/baby-boy.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: -60px;
+  top: -30px;
   margin: auto;
   left: 0px;
   right: 0px;
@@ -5315,32 +5337,45 @@ header.header > div:nth-of-type(2) a span {
   height: 52px;
 }
 
-.content-catch > div:nth-of-type(1):after {
+.content-catch.child3:before {
   content: "";
-  background-image: url(/images/top/pick.png);
+  background-image: url(/images/icon_kids/baby-girl.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: -22px;
+  top: -30px;
   margin: auto;
   left: 0px;
   right: 0px;
-  width: 300px;
-  height: 31px;
+  width: 52px;
+  height: 52px;
 }
 
-.content-catch > div:nth-of-type(2) {
-  padding-top: 30px;
+.content-catch h3 {
+  font-size: 18px;
+  color: #1e0111;
+  text-align: center;
+  line-height: 30px;
+  padding: 30px 0px 16px 0px;
+  font-weight: bold;
+  background-image: url(/images/top/pick.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
 }
 
-.content-catch > div:nth-of-type(2):before {
+.content-catch h3.child2 {
+  margin-top: 60px;
+}
+
+.content-catch h3.child2:before {
   content: "";
-  background-image: url(/images/kids-boy.png), url(/images/kids-girl.png);
+  background-image: url(/images/icon_kids/kids-boy.png), url(/images/icon_kids/kids-girl.png);
   background-position: 0px 0px,60px 0px,60px 0px;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: -14px;
+  top: -50px;
   margin: auto;
   left: 0px;
   right: 0px;
@@ -5348,62 +5383,43 @@ header.header > div:nth-of-type(2) a span {
   height: 52px;
 }
 
-.content-catch > div:nth-of-type(2):after {
-  content: "";
-  background-image: url(/images/top/pick.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 24px;
-  margin: auto;
-  left: 0px;
-  right: 0px;
-  width: 300px;
-  height: 31px;
+.content-catch h3 span {
+  font-size: 16px;
+  display: block;
 }
 
-.content-catch div {
-  position: relative;
-}
-
-.content-catch div h3 {
-  font-size: 18px;
-  color: #1e0111;
-  text-align: center;
-  font-weight: bold;
-  margin: 16px 0px;
-}
-
-.content-catch div p {
+.content-catch p {
   color: #585858;
 }
 
-.content-catch__button {
+.content-catch ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.content-catch ul li {
+  border: solid 1px #b4a7a0;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.content-catch__button div:nth-of-type(1) {
-  padding: 12px 38px;
-  font-size: 16px;
-  text-decoration: underline;
-  color: #ff8e09;
-}
-
-.content-catch__button div:nth-of-type(2) {
-  border-radius: 3px;
-  background-color: #ff8e09;
-  -webkit-box-shadow: 0 2px 0 0 #d57300;
-          box-shadow: 0 2px 0 0 #d57300;
-  font-size: 16px;
-  color: #ffffff;
-  padding: 10px 32px;
+.content-catch ul li img {
+  width: 48px;
+  height: 48px;
 }
 
 .button-base {
@@ -5436,12 +5452,76 @@ header.header > div:nth-of-type(2) a span {
   border-radius: 4px;
 }
 
+.button-registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-registration div:nth-of-type(1) {
+  padding: 12px 38px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #ff8e09;
+}
+
+.button-registration div:nth-of-type(2) {
+  border-radius: 3px;
+  background-color: #ff8e09;
+  -webkit-box-shadow: 0 2px 0 0 #d57300;
+          box-shadow: 0 2px 0 0 #d57300;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 32px;
+}
+
 .title-base {
   color: #1e0111;
   background-color: #fdffec;
   font-size: 14px;
   padding: 8px 16px;
   font-weight: bold;
+}
+
+h1.title-base {
+  position: absolute;
+  padding: 0;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 260px;
+  margin: auto;
+  z-index: 3;
+}
+
+h1.title-base div {
+  background-image: url("/images/test.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100px;
+  width: 260px;
+  margin: 0 auto;
+}
+
+h1.title-base div span {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100px;
+  line-height: 32px;
 }
 
 h2.title-base {
@@ -5502,6 +5582,15 @@ h3.title-base {
   background-color: #fff;
   position: relative;
   margin-left: 10px;
+}
+
+h2.title-sub {
+  background-color: #fdffec;
+  font-size: 16px;
+  color: #1e0111;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: 1px solid #e7e7e7;
 }
 
 .list-article__list {
@@ -5592,6 +5681,36 @@ h3.title-base {
 .outerside {
   margin-right: -16px;
   margin-left: -16px;
+}
+
+.list-text li {
+  line-height: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.list-text li a {
+  padding: 16px;
+  color: #141414;
+  display: block;
+  position: relative;
+}
+
+.list-text li a:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  border-top: solid 2px #605651;
+  border-right: solid 2px #605651;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 18px;
+  margin: auto;
 }
 
 .tab-list {
