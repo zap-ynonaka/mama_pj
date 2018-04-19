@@ -5,7 +5,7 @@
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    padding: 20px;
+    padding-bottom: 20px;
   }
   li {
     min-width: 120px;
@@ -34,5 +34,32 @@
     justify-content: center;
     align-items: center;
     height: 40px;
+  }
+  &-supervision{
+    a{
+    display: block;
+    font-size: 13px;
+    color: #ff8e09;
+    text-align: center;
+    position: relative;
+    width: 110px;
+    line-height: 16px;
+    margin: 0 auto;
+    padding: 20px 0px;
+      &:after{
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 0px;
+        border-top: solid 2px #ff8e09;
+        border-right: solid 2px #ff8e09;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0px;
+        margin: auto;
+      }
+    }
   }
 }
