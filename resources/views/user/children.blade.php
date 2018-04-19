@@ -7,7 +7,7 @@
 <div class="form-main">
 <div class="form-check__massage">まだプロフィールが登録されていません。</div>
   <h2 class="title-second__sub">子供の情報</h2>
-  <dl>
+  <dl class="form-list">
 
     <dt class="form-title" style="display: flex;">
       <div style="width: 80px;"><img src="https://placehold.jp/50/e0e0e0/e88888/100x100.png?text=%E3%81%8B" alt=""></div>
@@ -16,7 +16,7 @@
     <dd class="form-content">
       <div class="mypage-form">
         
-        <?php $params = ['id', 'img', 'nickname', 'gender', 'birthOrder', 'birth']; ?>
+        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
         @include('form.formBase')
 
       </div>
@@ -46,7 +46,14 @@
 <script type="text/javascript">
 
 $(function(){
+
   $('.form-main dl dt').on('click',function(){
+    // img　タップで切り替え
+    $('.form-item__img > div').on('click', function(){
+      $('.form-item__img > div').removeClass('js-active');
+      $(this).addClass('js-active');
+    });
+
     $('.form-main dl dd').removeClass('js-form__open');
     $(this).next().addClass('js-form__open');
 
@@ -63,6 +70,18 @@ $(function(){
         $('dl:nth-of-type(1) form input[name=nickname]').val(json[0].nickname);
         $('#json').append(json[0].nickname + '　');
         var jsonId = json[0].id;
+
+        // 誕生日
+        var birthDayY = Number( json[0].birthday.slice(0, 4) ),
+            birthDayM = Number( json[0].birthday.slice(5, 7) ),
+            birthDayD = Number( json[0].birthday.slice(8, 10) );
+
+        for(var i = 0;i <= $('.form-birthDay__year option').length; i++) {
+          var dYval = $('.form-birthDay__year option:nth-of-type('+i+')');
+          if( birthDayY == $(dYval).val() ) {
+            $(dYval).prop('selected',true);
+          }
+        }
 
         // 性別
         if ( json[0].gender === 'f' ) {

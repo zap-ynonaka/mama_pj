@@ -8,8 +8,10 @@
   &__base{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     li{
-      width: 50%;
+      width: 49%;
+      div img{border-radius: 4px;}
     }
     a{
       display: block;
