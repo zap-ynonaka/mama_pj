@@ -1,0 +1,6 @@
+.form-content {
+  display: none;
+  &.js-form__open {
+    display: block;
+  }
+}
