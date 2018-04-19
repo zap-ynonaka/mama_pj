@@ -111,8 +111,8 @@
       </ul>
       <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
       <div class="button-registration">
-          <div>ログイン</div>
-          <div>ユーザー登録</div>
+          <div><a href="/user/login">ログイン</a></div>
+          <div><a href="/user/regist_input">ユーザー登録</a></div>
       </div>
     </div>
   </div>
@@ -254,8 +254,8 @@
       <h3 class="child2">子ども同士について</h3>
       <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
       <div class="button-registration">
-          <div>ログイン</div>
-          <div>ユーザー登録</div>
+        <div><a href="/user/login">ログイン</a></div>
+        <div><a href="/user/regist_input">ユーザー登録</a></div>
       </div>
     </div>
   </div>

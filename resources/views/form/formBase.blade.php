@@ -20,13 +20,89 @@
 
 
   @if ($param == 'img')
-  <div class="form-item form-item__img" style="width: 80px;margin: auto;">
-    <input type="radio" name="form-img" />
-    <input type="radio" name="form-img" />
-    <input type="radio" name="form-img" />
+  <div class="form-item form-item__img">
+    <div class="form-item__imgFix">
+      <div></div>
+      <span class=""></span>
+    </div>
+    <div class="js-active ">
+      <label>
+        <img src="/images/icon_kids/baby-boy.png" alt="" />
+        <img src="https://placehold.jp/f3f3f3/cccccc/100x100.png" alt="">
+        <input type="radio" name="form-img" checked="checked" />
+      </label>
+    </div>
+    <div>
+      <label>
+        <img src="/images/icon_kids/baby-girl.png" alt="" />
+        <img src="https://placehold.jp/f3f3f3/cccccc/100x100.png" alt="">
+        <input type="radio" name="form-img" />
+      </label>
+    </div>
+    <div>
+      <label>
+        <img src="/images/icon_kids/boy.png" alt="" />
+        <img src="https://placehold.jp/f3f3f3/cccccc/100x100.png" alt="">
+        <input type="radio" name="form-img" />
+      </label>
+    </div>
+    <div>
+      <label>
+        <img src="/images/icon_kids/kids-boy.png" alt="" />
+        <img src="https://placehold.jp/f3f3f3/cccccc/100x100.png" alt="">
+        <input type="radio" name="form-img" />
+      </label>
+    </div>
+    <div>
+      <label>
+        <img src="/images/icon_kids/kids-girl.png" alt="" />
+        <img src="https://placehold.jp/f3f3f3/cccccc/100x100.png" alt="">
+        <input type="radio" name="form-img" />
+      </label>
+    </div>
+    <div>
+      <label>
+        <img src="/images/icon_kids/kids.png" alt="" />
+        <img src="https://placehold.jp/f3f3f3/cccccc/100x100.png" alt="">
+        <input type="radio" name="form-img" />
+      </label>
+    </div>
+    <div class="js-img__submit">決定</div>
   </div><br><br>
   @endif
 
+<style>
+.form-item__img {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 24px 16px;
+}
+
+.form-item__img > div {
+  width: 86px;
+  height: 86px;
+  position: relative;
+}
+
+.form-item__img > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.form-item__img > div.js-active img:nth-of-type(1) {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-item__img input {
+  display: none;
+}
+</style>
 
 
 
@@ -39,28 +115,30 @@
 
 
 
-  @if ($param == 'nickname')
-  <span>姓名（漢字）</span><br>
-  <input type="text" name="last_name" value="">
-  <input type="text" name="first_name" value="">
-  <br>
-  <br>
-  <span>姓名（かな）</span><br>
-  <input type="text" name="last_name_kana" value="">
-  <input type="text" name="first_name_kana" value="">
-  <br>
-  <br>
+  @if ($param == 'name')
+  <div class="form-item form-item__nickName">
+    <span>姓名（漢字）</span><br>
+    <input type="text" name="last_name" value="">
+    <input type="text" name="first_name" value="">
+  </div><br><br>
+
+  <div class="form-item form-item__nickName">
+    <span>姓名（かな）</span><br>
+    <input type="text" name="last_name_kana" value="">
+    <input type="text" name="first_name_kana" value="">
+  </div><br><br>
   @endif
 
 
 
   @if ($param == 'gender')
   <div class="form-item form-item__gender">
-    <span>性別</span>
+    <span>性別</span><br>
     <label>女の子
     <input type="radio" class="form-gender__f" name="gender" value="f" /></label>
     <label>男の子
-    <input type="radio" class="form-gender__m" name="gender" value="m" checked="checked" /></label></div><br><br>
+    <input type="radio" class="form-gender__m" name="gender" value="m" checked="checked" /></label>
+  </div><br><br>
   @endif
 
 
@@ -68,15 +146,15 @@
 
   @if ($param == 'blood')
   <div class="form-item form-item__gender">
-    <span>血液型</span>
+    <span>血液型</span><br>
     <select name="blood">
-      <option value="0" checked="checked"不明</option>
+      <option value="0" checked="checked">不明</option>
       <option value="1">A</option>
       <option value="2">B</option>
       <option value="3">O</option>
       <option value="4">AB</option>
     </select>
-  </div>
+  </div><br><br>
   @endif
 
 
@@ -91,7 +169,8 @@
       <option value="3">末っ子</option>
       <option value="4">一人っ子</option>
       <!-- <option value="5">一番下</option> -->
-    </select></div><br><br>
+    </select>
+  </div><br><br>
   @endif
 
 
@@ -100,7 +179,7 @@
   @if ($param == 'birth')
   <div class="form-item form-item__birth">
     <span>生年月日</span><br>
-    <select class="form-birthDay__year">
+    <select class="form-birthDay__year" name="birthday_y">
       <option value="">--</option>
       <option value="2018">2018</option>
       <option value="2017">2017</option>
@@ -183,7 +262,7 @@
       <option value="1940">1940</option>
     </select>年
       
-    <select class="form-birthDay__month" >
+    <select class="form-birthDay__month" name="birthday_m">
       <option value="">--</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -199,7 +278,7 @@
       <option value="12">12</option>
     </select>月
 
-    <select  class="form-birthDay__day" >
+    <select  class="form-birthDay__day" name="birthday_d">
       <option value="">--</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -233,7 +312,7 @@
       <option value="30">30</option>
       <option value="31">31</option>
     </select>日
-    <br><br>
+  </div><br><br>
   @endif
 
 
@@ -242,7 +321,7 @@
   @if ($param == 'birthTime')
   <div class="form-item form-item__birthTime">
     <span>出生時間</span><br>
-    <select class="form-birthTime__hour" >
+    <select class="form-birthTime__hour">
       <option value="-1" selected="selected">不明</option>
       <option value="0">00</option>
       <option value="1">01</option>
@@ -270,7 +349,7 @@
       <option value="23">23</option>
     </select>時
 
-    <select class="form-birthTime__minute" >
+    <select class="form-birthTime__minute">
       <option value="-1" selected="selected">不明</option>
       <option value="0">01</option>
       <option value="1">01</option>
@@ -334,6 +413,7 @@
       <option value="59">59</option>
     </select>分
   </div><br><br>
+  <input type="text" name="birthtime" value="9999">
   @endif
 
 
@@ -342,7 +422,7 @@
   @if ($param == 'birthPlace')
   <div class="form-item form-item__birthPlace">
     <span>出生地</span>
-    <select>
+    <select name="from_pref">
       <option value="614">北海道</option>
       <option value="611">青森県</option>
       <option value="608">岩手県</option>

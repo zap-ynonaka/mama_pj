@@ -1,6 +1,17 @@
 @extends('layout.app.master')
 @section('content')
 
+<h1 class="title-second__main">子どものプロフィール追加・確認・変更</h1>
+
+
+<div class="form-main">
+  <h2 class="title-second__sub">子供の情報</h2>
+  <dl class="form-checkList">
+    <dt>ニックネーム</dt>
+    <dd>{{@$nickname}}</dd>
+  </dl>
+</div>
+
 <h3>子供プロフィール編集</h3><br>
 <br>
 
