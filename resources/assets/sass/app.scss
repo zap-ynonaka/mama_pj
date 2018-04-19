@@ -29,8 +29,8 @@ section {
   padding-bottom: 24px;
 }
 
-.top__{
-  &famillyImg{
+.top {
+  &__famillyImg{
     background-image: url(/images/top/topillust.png);
     background-repeat: no-repeat;
     background-size: 80%;
@@ -38,7 +38,7 @@ section {
   }
 }
 
-.page-back{
+.page-back {
   text-decoration: underline;
   padding: 0px 0px 16px 28px;
   position: relative;
@@ -71,6 +71,9 @@ section {
 @import "button/_registration.scss";
 
 @import "title/_base.scss";
+@import "title/_second.scss";
+
+@import "form/_content.scss";
 
 @import "list/_article.scss";
 @import "list/_recomend.scss";
