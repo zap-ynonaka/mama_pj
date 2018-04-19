@@ -16,6 +16,7 @@
 img {display: block;width: 100%;}
 ul, li {list-style-type: none;}
 button{background-color: transparent;border: none;cursor: pointer;outline: none;appearance: none;}
+body{background:#f4f4f4;}
 
 main {
   max-width: 600px;
@@ -26,7 +27,7 @@ section {
   padding-top: 120px;
   background-color: #f7f7f7;
   position: relative;
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
 }
 
 .top {
@@ -57,6 +58,11 @@ section {
   }
 }
 
+.outerside{
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
 
 
 @import "base/_base.scss";
@@ -78,6 +84,7 @@ section {
 @import "list/_article.scss";
 @import "list/_recomend.scss";
 @import "list/_text.scss";
+@import "list/_category.scss";
 
 @import "tab/_list.scss";
 @import "tab/_content.scss";

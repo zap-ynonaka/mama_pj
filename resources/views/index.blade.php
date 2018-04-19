@@ -11,7 +11,7 @@
 </header>
 <main>
 <section class="top__famillyImg">
-  <h2 class="title-base"><div><span>test3月20日<br>今月のおすすめ</span></span></h2>
+  <h2 class="title-base"><div><span>test3月20日<br>今月のおすすめ</span></div></h2>
   <div class="content-space__top">
     <ul class="list-article__base">
       <li class="pickup">
@@ -41,9 +41,16 @@
 </section>
 
 <section>
-  <h2 class="title-base"><div><span>毎日チェック<br>4月16日の運勢</span></span></h2>
+  <h2 class="title-base"><div><span>毎日チェック<br>4月16日の運勢</span></div></h2>
   <div class="content-space__top">
-    <ul class="js-tab-list tab-list">
+    <div>
+    <h3>あなたの生年月日を入力</h3>
+      <form action="">
+        <input id="date" type="date">
+        <input type="submit" value="今日の運勢を占う">
+      </form>
+    </div>
+    <!-- <ul class="js-tab-list tab-list">
       <li class="js-active"><span>総合運</span></li>
       <li><span>家庭運</span></li>
       <li><span>金運</span></li>
@@ -87,24 +94,23 @@
           <a href="#">今週の運勢を見る</a>
         </div>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </section>
 
 
 <section>
-  <h2 class="title-base"><div><span>いつでも知りたい<br>Kid's ごきげん予報</span></span></h2>
+  <h2 class="title-base"><div><span>いつでも知りたい<br>Kid's ごきげん予報</span></div></h2>
   <div class="content-space__top yellowStripe">
-    <div class="content-catch">
-      <div>
-        <h3>子どもの性格診断</h3>
-        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
-      </div>
-      <div>
-        <h3>子ども同士について</h3>
-        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
-      </div>
-      <div class="content-catch__button">
+    <div class="content-catch child3">
+      <h3><span>子どもの今日のご機嫌がわかる!!</span>Kid's ごきげん予報</h3>
+      <ul>
+        <li><img src="/images/icon_kids/kids-girl.png" alt=""></li>
+        <li><img src="/images/icon_kids/kids.png" alt=""></li>
+        <li><img src="/images/icon_kids/boy.png" alt=""></li>
+      </ul>
+      <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
+      <div class="button-registration">
           <div>ログイン</div>
           <div>ユーザー登録</div>
       </div>
@@ -114,7 +120,7 @@
 
 
 <section>
-  <h2 class="title-base"><div><span>もしかして私だけ？<br>これって大丈夫？</span></span></h2>
+  <h2 class="title-base"><div><span>もしかして私だけ？<br>これって大丈夫？</span></div></h2>
   <div class="content-space__top">
     <ul class="list-recommend__base outerside">
       <li class="">
@@ -158,15 +164,40 @@
         </a>
       </li>
     </ul>
-
-    <div class="button-base">
+  <div class="">
+  <h2 class="title-sub outerside">コーナー別でもっと見る</h2>
+    <ul class="list-category2">
+      <li><a href="">育児の悩み</a></li>
+      <li><a href="">ママのストレス</a></li>
+      <li><a href="">パパへのイライラ</a></li>
+      <li><a href="">姑・親とのストレス</a></li>
+      <li><a href="">ママ友関係</a></li>
+    </ul>
+  </div>
+    <!-- <div class="button-base">
       <a href="/contents/list/8">もっと見る</a>
-    </div>
+    </div> -->
   </div>
 </section>
 
 <section>
-  <h2 class="title-base"><div><span>ああああああああ<br>私っていいママ？</span></span></h2>
+  <h2 class="title-base"><div><span>うらないたいことの<br>カテゴリで探す</span></div></h2>
+  <div class="content-space__top">
+    <ul class="list-category1">
+      <li><a href="">相性</a></li>
+      <li><a href="">ママのこと</a></li>
+      <li><a href="">子どものこと</a></li>
+      <li><a href="">パパのこと</a></li>
+      <li><a href="">兄弟のこと</a></li>
+      <li><a href="">義母のこと</a></li>
+    </ul>
+  </div>
+</section>
+
+
+
+<section>
+  <h2 class="title-base"><div><span>ああああああああ<br>私っていいママ？</span></div></h2>
   <div class="content-space__top">
     <ul class="list-article__base">
       <li class="">
@@ -215,18 +246,14 @@
 
 
 <section>
-  <h2 class="title-base"><div><span>いつでも知りたい<br>Kid's ごきげん予報</span></span></h2>
+  <h2 class="title-base"><div><span>実は知らない<br>子供の性格</span></div></h2>
   <div class="content-space__top yellowStripe">
-    <div class="content-catch">
-      <div>
-        <h3>子どもの性格診断</h3>
-        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
-      </div>
-      <div>
-        <h3>子ども同士について</h3>
-        <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
-      </div>
-      <div class="content-catch__button">
+    <div class="content-catch child1">
+      <h3>子どもの性格診断</h3>
+      <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
+      <h3 class="child2">子ども同士について</h3>
+      <p>例）こんなことがわかるよ的な結果テキストサンプルこんなことがわかるよ的な結果テキストサンプル。ユーザー登録（無料）するとこんなことが占えちゃうよん！おぬぬめだよん。</p>
+      <div class="button-registration">
           <div>ログイン</div>
           <div>ユーザー登録</div>
       </div>
@@ -236,7 +263,7 @@
 
 
 <section>
-  <h2 class="title-base"><div><span>ああああああああ<br>相性診断</span></span></h2>
+  <h2 class="title-base"><div><span>ああああああああ<br>相性診断</span></div></h2>
   <div class="content-space__top">
     <ul class="list-article__base">
       <li class="">
@@ -287,6 +314,7 @@
 </main>
 
 <footer class="footer">
+  <div class="footer-supervision"><a href="">監修者の紹介</a></div>
   <ul>
     <li><a href="/help/terms">利用規約</a></li>
     <li><a href="#">特定商法に関する表記</a></li>
