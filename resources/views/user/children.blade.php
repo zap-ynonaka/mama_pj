@@ -9,9 +9,22 @@
   <h2 class="title-second__sub">子供の情報</h2>
   <dl class="form-list">
 
-    <dt class="form-title" style="display: flex;">
-      <div style="width: 80px;"><img src="https://placehold.jp/50/e0e0e0/e88888/100x100.png?text=%E3%81%8B" alt=""></div>
-      <div style="flex: 1;"><span>かりんちゃん</span></div>
+    <dt class="form-child">
+      <div class="form-child__img"><img src="#" alt=""></div>
+      <div class="form-child__name"><span>新しく追加する</span></div>
+    </dt>
+    <dd class="form-content">
+      <div class="mypage-form">
+        
+        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
+        @include('form.formBase')
+
+      </div>
+    </dd>
+    
+    <dt class="form-child">
+      <div class="form-child__img"><img src="#" alt=""></div>
+      <div class="form-child__name"><span>かりんちゃん</span></div>
     </dt>
     <dd class="form-content">
       <div class="mypage-form">
@@ -22,14 +35,53 @@
       </div>
     </dd>
 
-    <dt class="form-title" style="display: flex;">
-      <div style="width: 80px;"><img src="https://placehold.jp/50/e0e0e0/e88888/100x100.png?text=%E3%81%8B" alt=""></div>
-      <div style="flex: 1;"><span>かりんちゃん</span></div>
+    <dt class="form-child">
+      <div class="form-child__img"><img src="#" alt=""></div>
+      <div class="form-child__name"><span>かりんちゃん</span></div>
     </dt>
     <dd class="form-content">
       <div class="mypage-form">
         
-        <?php $params = ['id', 'img', 'nickname', 'gender', 'birthOrder', 'birth']; ?>
+        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
+        @include('form.formBase')
+
+      </div>
+    </dd>
+
+    <dt class="form-child">
+      <div class="form-child__img"><img src="#" alt=""></div>
+      <div class="form-child__name"><span>かりんちゃん</span></div>
+    </dt>
+    <dd class="form-content">
+      <div class="mypage-form">
+        
+        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
+        @include('form.formBase')
+
+      </div>
+    </dd>
+
+    <dt class="form-child">
+      <div class="form-child__img"><img src="#" alt=""></div>
+      <div class="form-child__name"><span>かりんちゃん</span></div>
+    </dt>
+    <dd class="form-content">
+      <div class="mypage-form">
+        
+        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
+        @include('form.formBase')
+
+      </div>
+    </dd>
+
+    <dt class="form-child">
+      <div class="form-child__img"><img src="#" alt=""></div>
+      <div class="form-child__name"><span>かりんちゃん</span></div>
+    </dt>
+    <dd class="form-content">
+      <div class="mypage-form">
+        
+        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
         @include('form.formBase')
 
       </div>
@@ -48,10 +100,21 @@
 $(function(){
 
   $('.form-main dl dt').on('click',function(){
+
+    // ペン付きimgタップでフォーム切替
+    $('.js-img__submit').on('click', function(){
+      $('.form-item__imgFix').css('display', 'block');
+      $('.form-item__img').css('display', 'none');
+    });
+    $('.form-item__imgFix').on('click', function(){
+      $('.form-item__imgFix').css('display', 'none');
+      $('.form-item__img').css('display', 'flex');
+    });
     // img　タップで切り替え
     $('.form-item__img > div').on('click', function(){
       $('.form-item__img > div').removeClass('js-active');
       $(this).addClass('js-active');
+      console.log($(this).children);
     });
 
     $('.form-main dl dd').removeClass('js-form__open');
@@ -65,6 +128,9 @@ $(function(){
 
         // id
         $('dl:nth-of-type(1) form input[name=userid]').val(json[0].id);
+
+         // icon
+         $('dl:nth-of-type(1) form input[name=imgfile]').val(json[0].icon_imgfile);
 
         //　ニックネーム
         $('dl:nth-of-type(1) form input[name=nickname]').val(json[0].nickname);

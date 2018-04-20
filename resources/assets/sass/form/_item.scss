@@ -1,0 +1,35 @@
+.form-item {
+  &__img {
+    button {
+      width: 80%;
+      padding: 10px;
+      background-color: #ddd;
+    }
+  }
+  &__imgFix {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid #b4a7a0;
+    position: relative;
+    background-size: 54px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    &.js-child_01 {
+      background-image: url("/images/icon_kids/baby-boy.png");
+    }
+    
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url("/images/icon/pen.png");
+      background-size: contain;
+      position: absolute;
+      bottom: 0px;
+      right: -6px;
+    }
+  }
+}

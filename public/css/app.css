@@ -5488,6 +5488,20 @@ header.header > div:nth-of-type(2) a span {
   border-radius: 4px;
 }
 
+.button-base input.button {
+  border: solid 0.5px #ffcd09;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffcd09;
+          box-shadow: 0 1px 0 0 #ffcd09;
+  border-radius: 1.5px;
+  text-align: center;
+  width: 50%;
+  padding: 2%;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+}
+
 .button-registration {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5646,6 +5660,101 @@ h3.title-base {
   display: block;
 }
 
+.form-checkList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-checkList dt,
+.form-checkList dd {
+  width: 50%;
+  line-height: 40px;
+}
+
+.form-checkList dd {
+  text-align: right;
+}
+
+.form-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-child__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #b4a7a0;
+}
+
+.form-child__name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 12px;
+  font-weight: 700;
+}
+
+.form-child::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 16px;
+  bottom: 0;
+  margin: auto;
+}
+
+.form-item__img button {
+  width: 80%;
+  padding: 10px;
+  background-color: #ddd;
+}
+
+.form-item__imgFix {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid #b4a7a0;
+  position: relative;
+  background-size: 54px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.form-item__imgFix.js-child_01 {
+  background-image: url("/images/icon_kids/baby-boy.png");
+}
+
+.form-item__imgFix::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/icon/pen.png");
+  background-size: contain;
+  position: absolute;
+  bottom: 0px;
+  right: -6px;
+}
+
 .list-article__list {
   margin: 0;
   padding: 0;
@@ -5801,11 +5910,7 @@ h3.title-base {
 
 .list-category2 li {
   width: 156px;
-  margin-top: 16px;
-}
-
-.list-category2 li:nth-child(odd) {
-  margin-right: 16px;
+  margin: 16px 6px 0px 0px;
 }
 
 .list-category2 li a {

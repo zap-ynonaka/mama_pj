@@ -20,8 +20,7 @@
   flex-flow: row wrap;
   li {
     width: 156px;
-    margin-top: 16px;
-    &:nth-child(odd) {margin-right: 16px;}    
+    margin: 16px 6px 0px 0px;   
     a {
       display: block;
       text-align: center;
