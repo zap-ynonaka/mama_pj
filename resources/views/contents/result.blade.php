@@ -1,11 +1,18 @@
 @extends('layout.app.master')
 @section('content')
 
-メニュー名:{{@$menu_name}}<br>
-<br>
+
+<section>
+  <h1 class="title-base">{{@$menu_name}}</h1>
+  <div class="second-selectList">
+    <img src="http://placehold.jp/375x200.png" alt="">
+    <p>{{@$result['text1']}}</p>
+  </div>
+
+</section>
+
 サマリー:{{@$result['summary']}}<br>
-<br>
-結果テキスト:{{@$result['text1']}}<br>
+
 <br>
 結果保存する<br>
 <br>

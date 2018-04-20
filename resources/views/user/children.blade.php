@@ -9,28 +9,17 @@
   <h2 class="title-second__sub">子供の情報</h2>
   <dl class="form-list">
 
-    <dt class="form-child">
+    <dt class="form-child form-child__new">
       <div class="form-child__img"><img src="#" alt=""></div>
       <div class="form-child__name"><span>新しく追加する</span></div>
     </dt>
     <dd class="form-content">
       <div class="mypage-form">
-        
-        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
-        @include('form.formBase')
 
-      </div>
-    </dd>
-    
-    <dt class="form-child">
-      <div class="form-child__img"><img src="#" alt=""></div>
-      <div class="form-child__name"><span>かりんちゃん</span></div>
-    </dt>
-    <dd class="form-content">
-      <div class="mypage-form">
-        
+        <form action="/user/children_profile" method="post">
         <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
         @include('form.formBase')
+        </form>
 
       </div>
     </dd>
@@ -41,9 +30,11 @@
     </dt>
     <dd class="form-content">
       <div class="mypage-form">
-        
+
+        <form action="/user/children_profile" method="post">
         <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
         @include('form.formBase')
+        </form>
 
       </div>
     </dd>
@@ -54,9 +45,11 @@
     </dt>
     <dd class="form-content">
       <div class="mypage-form">
-        
+
+        <form action="/user/children_profile" method="post">
         <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
         @include('form.formBase')
+        </form>
 
       </div>
     </dd>
@@ -67,9 +60,11 @@
     </dt>
     <dd class="form-content">
       <div class="mypage-form">
-        
+
+        <form action="/user/children_profile" method="post">
         <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
         @include('form.formBase')
+        </form>
 
       </div>
     </dd>
@@ -80,9 +75,26 @@
     </dt>
     <dd class="form-content">
       <div class="mypage-form">
-        
+
+        <form action="/user/children_profile" method="post">
         <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
         @include('form.formBase')
+        </form>
+
+      </div>
+    </dd>
+
+    <dt class="form-child">
+      <div class="form-child__img"><img src="#" alt=""></div>
+      <div class="form-child__name"><span>かりんちゃん</span></div>
+    </dt>
+    <dd class="form-content">
+      <div class="mypage-form">
+
+        <form action="/user/children_profile" method="post">
+        <?php $params = ['id', 'img', 'nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
+        @include('form.formBase')
+        </form>
 
       </div>
     </dd>
@@ -98,6 +110,28 @@
 <script type="text/javascript">
 
 $(function(){
+
+  $.ajax({
+    url:'/api/children/list',
+    type:'GET',
+    dataType: 'json',
+    success: function(json){
+      var len = Object.keys(json).length - 1 ;
+      console.log(len);
+      if( len == 0 ) {
+        $('.form-child__new').css('display', 'flex');
+        console.log(0);
+      } else if ( len < 4 ) {
+        var target = $('.form-child:nth-of-type('+len+')');
+        $(target).css('display', 'flex');
+        console.log(4);
+      } else {
+        $('.form-child__new').css('display', 'none');
+        console.log(5);
+      }
+    }
+  });
+
 
   $('.form-main dl dt').on('click',function(){
 

@@ -1,9 +1,4 @@
-<!-- @section ('formBase')
-<div>テスト</div>
-@endsection -->
 
-
-<form action="/user/children_profile" method="post">
 {{ csrf_field() }}
 
 @foreach($params as $param)

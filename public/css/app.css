@@ -58,7 +58,7 @@ section {
   color: #585858;
 }
 
-.page-back :before {
+.page-back:before {
   content: '';
   width: 8px;
   height: 8px;
@@ -5488,20 +5488,6 @@ header.header > div:nth-of-type(2) a span {
   border-radius: 4px;
 }
 
-.button-base input.button {
-  border: solid 0.5px #ffcd09;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 1px 0 0 #ffcd09;
-          box-shadow: 0 1px 0 0 #ffcd09;
-  border-radius: 1.5px;
-  text-align: center;
-  width: 50%;
-  padding: 2%;
-  font-weight: bold;
-  margin: 0 auto;
-  display: block;
-}
-
 .button-registration {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5529,6 +5515,20 @@ header.header > div:nth-of-type(2) a span {
   font-size: 16px;
   color: #ffffff;
   padding: 10px 20px;
+  display: block;
+}
+
+.button-profile {
+  border: solid 0.5px #ffcd09;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffcd09;
+          box-shadow: 0 1px 0 0 #ffcd09;
+  border-radius: 1.5px;
+  text-align: center;
+  width: 50%;
+  padding: 2%;
+  font-weight: bold;
+  margin: 0 auto;
   display: block;
 }
 
@@ -5652,6 +5652,12 @@ h3.title-base {
   border-bottom: 2px solid #ff8e09;
 }
 
+.form-main {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
 .form-content {
   display: none;
 }
@@ -5672,6 +5678,10 @@ h3.title-base {
 .form-checkList dd {
   width: 50%;
   line-height: 40px;
+}
+
+.form-checkList dt {
+  font-weight: bold;
 }
 
 .form-checkList dd {
@@ -5721,10 +5731,45 @@ h3.title-base {
   margin: auto;
 }
 
+.form-item__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 24px 16px;
+}
+
 .form-item__img button {
   width: 80%;
   padding: 10px;
   background-color: #ddd;
+}
+
+.form-item__img > div {
+  width: 86px;
+  height: 86px;
+  position: relative;
+}
+
+.form-item__img > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.form-item__img > div.js-active img:nth-of-type(1) {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-item__img > div input {
+  display: none;
 }
 
 .form-item__imgFix {
