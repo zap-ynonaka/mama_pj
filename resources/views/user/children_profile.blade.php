@@ -3,17 +3,33 @@
 
 <h1 class="title-second__main">子どものプロフィール追加・確認・変更</h1>
 
-
 <div class="form-main">
+<form action="/user/children_profile" method="post">
   <h2 class="title-second__sub">子供の情報</h2>
   <dl class="form-checkList">
     <dt>ニックネーム</dt>
-    <dd>{{@$nickname}}</dd>
+    <dd>ふぇすまる</dd>
+    <dt>姓名（漢字）</dt>
+    <dd>適当</dd>
+    <dt>姓名（かな）</dt>
+    <dd>適当</dd>
+    <dt>生年月日</dt>
+    <dd>1986年02月02日</dd>
+    <dt>出生時間</dt>
+    <dd>不明</dd>
+    <dt>血液型:</dt>
+    <dd>B</dd>
+    <dt>性別:</dt>
+    <dd>男性</dd>
+    <dt>出生地:</dt>
+    <dd>東京</dd>
   </dl>
+  </form>
 </div>
 
 <h3>子供プロフィール編集</h3><br>
 <br>
+
 
 {{-- 完了画面 --}}
 @if (@$btn_complete)
@@ -27,7 +43,43 @@
 {{-- 確認画面 --}}
 @elseif (@$btn_check)
 
+<h1 class="title-second__main">子どものプロフィール追加・確認・変更</h1>
+
 <form action="/user/children_profile" method="post">
+
+<div class="form-main">
+<form action="/user/children_profile" method="post">
+  <h2 class="title-second__sub">子供の情報</h2>
+  <dl class="form-checkList">
+    <dt>ニックネーム</dt>
+    <dd>ふぇすまる</dd>
+    <dt>姓名（漢字）</dt>
+    <dd>適当</dd>
+    <dt>姓名（かな）</dt>
+    <dd>適当</dd>
+    <dt>生年月日</dt>
+    <dd>1986年02月02日</dd>
+    <dt>出生時間</dt>
+    <dd>不明</dd>
+    <dt>血液型:</dt>
+    <dd>B</dd>
+    <dt>性別:</dt>
+    <dd>男性</dd>
+    <dt>出生地:</dt>
+    <dd>東京</dd>
+  </dl>
+{{-- ボタンnameで遷移先を制御しているので変更しないこと --}}
+<input type="submit" name="btn_check" value="登録する" class="button"/><br>
+</form>
+  <form action="/user/mypage" method="post">
+    {{ csrf_field() }}
+    <div class="page-back">
+      <input type="submit" name="btn_return" value="戻る"/>
+    </div>
+  </form>
+
+</div>
+
   {{ csrf_field() }}
 
   ニックネーム<br>

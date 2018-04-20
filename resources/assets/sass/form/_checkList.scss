@@ -1,0 +1,11 @@
+.form-checkList{
+  display: flex;
+  flex-wrap: wrap;
+  dt,dd {
+    width: 50%;
+    line-height: 40px;
+  }
+  dd{
+    text-align: right;
+  }
+}

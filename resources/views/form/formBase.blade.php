@@ -20,11 +20,11 @@
 
 
   @if ($param == 'img')
-  <div class="form-item form-item__img">
-    <div class="form-item__imgFix">
-      <div></div>
-      <span class=""></span>
-    </div>
+  <input type="text" value="" name="imgfile">
+  <div class="form-item__imgFix js-child_01">
+
+  </div>
+  <div class="form-item__img">
     <div class="js-active ">
       <label>
         <img src="/images/icon_kids/baby-boy.png" alt="" />
@@ -67,7 +67,7 @@
         <input type="radio" name="form-img" />
       </label>
     </div>
-    <div class="js-img__submit">決定</div>
+    <button type="button" class="js-img__submit">決定</button>
   </div><br><br>
   @endif
 
