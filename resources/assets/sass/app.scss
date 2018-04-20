@@ -44,7 +44,7 @@ section {
   padding: 0px 0px 16px 28px;
   position: relative;
   color: #585858;
-  :before {
+  &:before {
     content: '';
     width: 8px;
     height: 8px;
@@ -75,10 +75,12 @@ section {
 
 @import "button/_base.scss";
 @import "button/_registration.scss";
+@import "button/_profile.scss";
 
 @import "title/_base.scss";
 @import "title/_second.scss";
 
+@import "form/_main.scss";
 @import "form/_content.scss";
 @import "form/_checkList.scss";
 @import "form/_child.scss";

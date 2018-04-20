@@ -1,9 +1,6 @@
 @extends('layout.app.master')
 @section('content')
 
-<h3>ユーザープロフィール編集</h3><br>
-<br>
-
 {{-- 完了画面 --}}
 @if (@$btn_complete)
 
@@ -14,54 +11,33 @@
 {{-- 確認画面 --}}
 @elseif (@$btn_check)
 
+
+<h1 class="title-second__main">ユーザープロフィール編集</h1>
+
+<div class="form-main">
 <form action="/user/my_profile" method="post">
   {{ csrf_field() }}
 
-  ニックネーム<br>
-  {{@$nickname}}
-  <br>
-  <br>
-  姓名（漢字）<br>
-  {{@$last_name}}
-  {{@$first_name}}
-  <br>
-  <br>
-  旧姓<br>
-  {{@$maiden_name}}
-  <br>
-  <br>
-  姓名（かな）<br>
-  {{@$last_name_kana}}
-  {{@$first_name_kana}}
-  <br>
-  <br>
-  生年月日<br>
-  {{@$birthday_y}}年
-  {{@$birthday_m}}月
-  {{@$birthday_d}}日
-  <br>
-  <br>
-  出生時間<br>
-  {{(@$birthtime_unknown) ? '不明' : @$birthtime}}
-  <br>
-  <br>
-  <?php $blood_st = [0 => '不明', 1 => 'A', 2 => 'B', 3 => 'O', 4 => 'AB']; ?>
-  血液型:{{$blood_st[@$blood]}}
-
-
-&nbsp;
-  <?php $gender_st = ['f' => '女性', 'm' => '男性']; ?>
-  性別:{{$gender_st[@$gender]}}
-
-&nbsp;
-  出生地:
-  {{@$prfile_area[@$from_pref]}}
-<br>
-<br>
-  <?php $birthorder_st = [1 => 'いちばん上', 2 => '真ん中', 3 => '末っ子', 4 => 'ひとりっ子']; ?>
-  生まれ順:{{$birthorder_st[@$birthorder]}}<br>
-<br>
-<br>
+  <dl class="form-checkList">
+    <dt>ニックネーム</dt>
+    <dd>{{@$nickname}}</dd>
+    <dt>姓名（漢字）</dt>
+    <dd>{{@$last_name}} {{@$first_name}}</dd>
+    <dt>姓名（かな）</dt>
+    <dd>{{@$last_name_kana}} {{@$first_name_kana}}</dd>
+    <dt>生年月日</dt>
+    <dd>{{@$birthday_y}}年 {{@$birthday_m}}月 {{@$birthday_d}}日</dd>
+    <dt><?php $birthorder_st = [1 => 'いちばん上', 2 => '真ん中', 3 => '末っ子', 4 => 'ひとりっ子']; ?>生まれ順</dt>
+    <dd>{{$birthorder_st[@$birthorder]}}</dd>
+    <dt>出生時間</dt>
+    <dd>{{(@$birthtime_unknown) ? '不明' : @$birthtime}}</dd>
+    <dt><?php $blood_st = [0 => '不明', 1 => 'A', 2 => 'B', 3 => 'O', 4 => 'AB']; ?>血液型:</dt>
+    <dd>{{$blood_st[@$blood]}}</dd>
+    <dt><?php $gender_st = ['f' => '女性', 'm' => '男性']; ?>性別:</dt>
+    <dd>{{$gender_st[@$gender]}}</dd>
+    <dt>出生地:</dt>
+    <dd>{{@$prfile_area[@$from_pref]}}</dd>
+  </dl>
 
 
   <input type="hidden" name="nickname" value="{{@$nickname}}">
@@ -82,8 +58,13 @@
   <input type="hidden" name="birthorder" value="{{@$birthorder}}">
 
   {{-- ボタンnameで遷移先を制御しているので変更しないこと --}}
-  <input type="submit" name="btn_complete" value="登録する" /><br>
-  <input type="submit" name="btn_input" value="戻る" />
+  <div class="button-profile">
+    <input type="submit" name="btn_complete" value="登録する" />
+  </div>
+
+  <div class="page-back">
+    <input type="submit" name="btn_input" value="戻る" />
+  </div>
 </form>
 
 
@@ -92,12 +73,10 @@
 
 
 <form action="/user/my_profile" method="post">
-  {{ csrf_field() }}
 
-  ニックネーム<br>
-  <input type="text" name="nickname" value="{{@$nickname}}">
-  <br>
-  <br>
+  <?php $params = ['nickname', 'gender', 'blood', 'birthOrder', 'birth', 'birthTime', 'birthPlace']; ?>
+  @include('form.formBase')
+
   姓名（漢字）<br>
   <input type="text" name="last_name" value="{{@$last_name}}">
   <input type="text" name="first_name" value="{{@$first_name}}">

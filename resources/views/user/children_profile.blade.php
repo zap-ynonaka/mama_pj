@@ -1,35 +1,6 @@
 @extends('layout.app.master')
 @section('content')
 
-<h1 class="title-second__main">子どものプロフィール追加・確認・変更</h1>
-
-<div class="form-main">
-<form action="/user/children_profile" method="post">
-  <h2 class="title-second__sub">子供の情報</h2>
-  <dl class="form-checkList">
-    <dt>ニックネーム</dt>
-    <dd>ふぇすまる</dd>
-    <dt>姓名（漢字）</dt>
-    <dd>適当</dd>
-    <dt>姓名（かな）</dt>
-    <dd>適当</dd>
-    <dt>生年月日</dt>
-    <dd>1986年02月02日</dd>
-    <dt>出生時間</dt>
-    <dd>不明</dd>
-    <dt>血液型:</dt>
-    <dd>B</dd>
-    <dt>性別:</dt>
-    <dd>男性</dd>
-    <dt>出生地:</dt>
-    <dd>東京</dd>
-  </dl>
-  </form>
-</div>
-
-<h3>子供プロフィール編集</h3><br>
-<br>
-
 
 {{-- 完了画面 --}}
 @if (@$btn_complete)
@@ -49,28 +20,51 @@
 
 <div class="form-main">
 <form action="/user/children_profile" method="post">
+  {{ csrf_field() }}
   <h2 class="title-second__sub">子供の情報</h2>
   <dl class="form-checkList">
     <dt>ニックネーム</dt>
-    <dd>ふぇすまる</dd>
+    <dd>{{@$nickname}}</dd>
     <dt>姓名（漢字）</dt>
-    <dd>適当</dd>
+    <dd>{{@$last_name}} {{@$first_name}}</dd>
     <dt>姓名（かな）</dt>
-    <dd>適当</dd>
+    <dd>{{@$last_name_kana}} {{@$first_name_kana}}</dd>
     <dt>生年月日</dt>
-    <dd>1986年02月02日</dd>
+    <dd>{{@$birthday_y}}年 {{@$birthday_m}}月 {{@$birthday_d}}日</dd>
+    <dt><?php $birthorder_st = [1 => 'いちばん上', 2 => '真ん中', 3 => '末っ子', 4 => 'ひとりっ子']; ?>生まれ順</dt>
+    <dd>{{$birthorder_st[@$birthorder]}}</dd>
     <dt>出生時間</dt>
-    <dd>不明</dd>
-    <dt>血液型:</dt>
-    <dd>B</dd>
-    <dt>性別:</dt>
-    <dd>男性</dd>
+    <dd>{{(@$birthtime_unknown) ? '不明' : @$birthtime}}</dd>
+    <dt><?php $blood_st = [0 => '不明', 1 => 'A', 2 => 'B', 3 => 'O', 4 => 'AB']; ?>血液型:</dt>
+    <dd>{{$blood_st[@$blood]}}</dd>
+    <dt><?php $gender_st = ['f' => '女性', 'm' => '男性']; ?>性別:</dt>
+    <dd>{{$gender_st[@$gender]}}</dd>
     <dt>出生地:</dt>
-    <dd>東京</dd>
+    <dd>{{@$prfile_area[@$from_pref]}}</dd>
   </dl>
-{{-- ボタンnameで遷移先を制御しているので変更しないこと --}}
-<input type="submit" name="btn_check" value="登録する" class="button"/><br>
-</form>
+
+    <input type="hidden" name="cid" value="{{@$cid}}">
+    <input type="hidden" name="nickname" value="{{@$nickname}}">
+    <input type="hidden" name="last_name" value="{{@$last_name}}">
+    <input type="hidden" name="first_name" value="{{@$first_name}}">
+    <input type="hidden" name="last_name_kana" value="{{@$last_name_kana}}">
+    <input type="hidden" name="first_name_kana" value="{{@$first_name_kana}}">
+    <input type="hidden" name="birthday_y" value="{{@$birthday_y}}">
+    <input type="hidden" name="birthday_m" value="{{@$birthday_m}}">
+    <input type="hidden" name="birthday_d" value="{{@$birthday_d}}">
+    <input type="hidden" name="birthday" value="{{@$birthday}}">
+    <input type="hidden" name="birthtime" value="{{@$birthtime}}">
+    <input type="hidden" name="birthtime_unknown" value="{{@$birthtime_unknown}}">
+    <input type="hidden" name="blood" value="{{@$blood}}">
+    <input type="hidden" name="gender" value="{{@$gender}}">
+    <input type="hidden" name="from_pref" value="{{@$from_pref}}">
+    <input type="hidden" name="birthorder" value="{{@$birthorder}}">
+
+  {{-- ボタンnameで遷移先を制御しているので変更しないこと --}}
+  <div class="button-profile">
+      <input type="submit" name="btn_check" value="登録する" />
+    </div>
+  </form>
   <form action="/user/mypage" method="post">
     {{ csrf_field() }}
     <div class="page-back">
@@ -80,71 +74,6 @@
 
 </div>
 
-  {{ csrf_field() }}
-
-  ニックネーム<br>
-  {{@$nickname}}
-  <br>
-  <br>
-  姓名（漢字）<br>
-  {{@$last_name}}
-  {{@$first_name}}
-  <br>
-  <br>
-  姓名（かな）<br>
-  {{@$last_name_kana}}
-  {{@$first_name_kana}}
-  <br>
-  <br>
-  生年月日<br>
-  {{@$birthday_y}}年
-  {{@$birthday_m}}月
-  {{@$birthday_d}}日
-  <br>
-  <br>
-  出生時間<br>
-  {{(@$birthtime_unknown) ? '不明' : @$birthtime}}
-  <br>
-  <br>
-  <?php $blood_st = [0 => '不明', 1 => 'A', 2 => 'B', 3 => 'O', 4 => 'AB']; ?>
-  血液型:{{$blood_st[@$blood]}}
-
-
-&nbsp;
-  <?php $gender_st = ['f' => '女性', 'm' => '男性']; ?>
-  性別:{{$gender_st[@$gender]}}
-
-&nbsp;
-  出生地:
-  {{@$prfile_area[@$from_pref]}}
-<br>
-<br>
-  <?php $birthorder_st = [1 => 'いちばん上', 2 => '真ん中', 3 => '末っ子', 4 => 'ひとりっ子']; ?>
-  生まれ順:{{$birthorder_st[@$birthorder]}}<br>
-<br>
-<br>
-
-
-  <input type="hidden" name="cid" value="{{@$cid}}">
-  <input type="hidden" name="nickname" value="{{@$nickname}}">
-  <input type="hidden" name="last_name" value="{{@$last_name}}">
-  <input type="hidden" name="first_name" value="{{@$first_name}}">
-  <input type="hidden" name="last_name_kana" value="{{@$last_name_kana}}">
-  <input type="hidden" name="first_name_kana" value="{{@$first_name_kana}}">
-  <input type="hidden" name="birthday_y" value="{{@$birthday_y}}">
-  <input type="hidden" name="birthday_m" value="{{@$birthday_m}}">
-  <input type="hidden" name="birthday_d" value="{{@$birthday_d}}">
-  <input type="hidden" name="birthday" value="{{@$birthday}}">
-  <input type="hidden" name="birthtime" value="{{@$birthtime}}">
-  <input type="hidden" name="birthtime_unknown" value="{{@$birthtime_unknown}}">
-  <input type="hidden" name="blood" value="{{@$blood}}">
-  <input type="hidden" name="gender" value="{{@$gender}}">
-  <input type="hidden" name="from_pref" value="{{@$from_pref}}">
-  <input type="hidden" name="birthorder" value="{{@$birthorder}}">
-
-  {{-- ボタンnameで遷移先を制御しているので変更しないこと --}}
-  <input type="submit" name="btn_complete" value="登録する" /><br>
-  <input type="submit" name="btn_input" value="戻る" />
 </form>
 
 
