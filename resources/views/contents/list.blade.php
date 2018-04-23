@@ -22,10 +22,10 @@
     <p>{{@$corners->corner_caption}}</p>
   </div>
   <ul class="list-article__base">
-	@if (@$menus)
+  @if (@$menus)
     @foreach (@$menus as $m)
     <li class="">
-      <a href="#">
+      <a href="/contents/result/{{$m->id}}">
         <div>
           <img src="http://placehold.jp/375x200.png" alt="">
         </div>
