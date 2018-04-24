@@ -1,0 +1,20 @@
+.sns-share__result {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  li {
+    width: 31%;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #888;
+    padding-left: 30px;
+    color: #fff;
+    border-radius: 4px;
+  }
+}

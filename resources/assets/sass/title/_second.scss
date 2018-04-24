@@ -12,4 +12,23 @@
     font-size: 15px;
     border-bottom: 2px solid #ff8e09;
   }
+  &__base {
+    background-image: url(/images/second/rectangle-5.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 16px;
+    color: #1e0111;
+    font-weight: bold;
+    margin: auto;
+    width: 260px;
+    height: 70px;
+    line-height: 57px;
+    text-align: center;
+    position: absolute;
+    padding: 0;
+    top: 70px;
+    z-index: 3;
+    left: 0;
+    right: 0;
+  }
 }

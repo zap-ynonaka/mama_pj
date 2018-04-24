@@ -4,7 +4,7 @@
   @include('layout.app.head')
 </head>
 <body>
-  @include('layout.app.header')
+  @include('layout.app.header_second')
 <main>
 
 <div id="app">
