@@ -30,6 +30,12 @@ section {
   // padding-bottom: 24px;
 }
 
+section.second {
+  background-color: #f7f7f7;
+  position: relative;
+  padding-top: 52px;
+}
+
 .top {
   &__famillyImg{
     background-image: url(/images/top/topillust.png);
@@ -39,7 +45,7 @@ section {
   }
 }
 
-.page-back {
+.page-back a {
   text-decoration: underline;
   padding: 0px 0px 16px 28px;
   position: relative;
@@ -76,6 +82,8 @@ section {
 @import "button/_base.scss";
 @import "button/_registration.scss";
 @import "button/_profile.scss";
+@import "button/_default.scss";
+
 
 @import "title/_base.scss";
 @import "title/_second.scss";
