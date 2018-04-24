@@ -5351,6 +5351,15 @@ header.header > div:nth-of-type(2) a span {
   padding-bottom: 40px;
 }
 
+.content-space__second {
+  background-color: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
 .content-catch {
   background-color: rgba(255, 255, 255, 0.9);
   -webkit-box-shadow: 0 0 6px 0 rgba(255, 142, 9, 0.7);
@@ -5458,6 +5467,13 @@ header.header > div:nth-of-type(2) a span {
   height: 48px;
 }
 
+.content-catch__discription {
+  text-align: center;
+  font-weight: bold;
+  color: #1e0111;
+  display: block;
+}
+
 .button-base {
   margin: 0 auto 12px;
   width: 50%;
@@ -5532,13 +5548,13 @@ header.header > div:nth-of-type(2) a span {
   display: block;
 }
 
-.title-base {
+.title-top__base {
   color: #1e0111;
   font-size: 14px;
   font-weight: bold;
 }
 
-h1.title-base {
+h1.title-top__base {
   position: absolute;
   padding: 0;
   top: 70px;
@@ -5549,7 +5565,7 @@ h1.title-base {
   z-index: 3;
 }
 
-h1.title-base div {
+h1.title-top__base div {
   background-image: url("/images/test.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -5558,7 +5574,7 @@ h1.title-base div {
   margin: 0 auto;
 }
 
-h1.title-base div span {
+h1.title-top__base div span {
   font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5574,7 +5590,7 @@ h1.title-base div span {
   line-height: 32px;
 }
 
-h2.title-base {
+h2.title-top__base {
   position: absolute;
   padding: 0;
   top: 70px;
@@ -5585,7 +5601,7 @@ h2.title-base {
   z-index: 3;
 }
 
-h2.title-base div {
+h2.title-top__base div {
   background-image: url(/images/top/midashi.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -5593,7 +5609,7 @@ h2.title-base div {
   width: 260px;
 }
 
-h2.title-base div span {
+h2.title-top__base div span {
   font-size: 16px;
   position: absolute;
   top: 10px;
@@ -5604,7 +5620,7 @@ h2.title-base div span {
   line-height: 32px;
 }
 
-h2.title-base:after {
+h2.title-top__base:after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -5618,7 +5634,7 @@ h2.title-base:after {
   border-radius: 5px;
 }
 
-h3.title-base {
+h3.title-top__base {
   font-size: 16px;
   color: #ff8e09;
   font-weight: bold;
@@ -5650,6 +5666,26 @@ h3.title-base {
   color: #1e0111;
   font-size: 15px;
   border-bottom: 2px solid #ff8e09;
+}
+
+.title-second__base {
+  background-image: url(/images/second/rectangle-5.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 16px;
+  color: #1e0111;
+  font-weight: bold;
+  margin: auto;
+  width: 260px;
+  height: 70px;
+  line-height: 57px;
+  text-align: center;
+  position: absolute;
+  padding: 0;
+  top: 70px;
+  z-index: 3;
+  left: 0;
+  right: 0;
 }
 
 .form-main {
@@ -6118,5 +6154,12 @@ h3.title-base {
   left: -10px;
   width: 22px;
   height: 20px;
+}
+
+.form-register__navi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
 }
 

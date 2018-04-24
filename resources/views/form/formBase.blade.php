@@ -471,48 +471,48 @@
 
 
 
-@if ($param == 'nickname')
+@if ($param == 'nickname2')
   <div class="form-item form-item__nickName">
     <span>ニックネーム</span><br>
-    <input type="text" name="nickname" value="" />
+    <input type="text" name="nickname2" value="" />
   </div><br><br>
   @endif
 
 
 
-  @if ($param == 'name')
+  @if ($param == 'name2')
   <div class="form-item form-item__nickName">
     <span>姓名（漢字）</span><br>
-    <input type="text" name="last_name" value="">
-    <input type="text" name="first_name" value="">
+    <input type="text" name="last_name2" value="">
+    <input type="text" name="first_name2" value="">
   </div><br><br>
 
   <div class="form-item form-item__nickName">
     <span>姓名（かな）</span><br>
-    <input type="text" name="last_name_kana" value="">
-    <input type="text" name="first_name_kana" value="">
+    <input type="text" name="last_name_kana2" value="">
+    <input type="text" name="first_name_kana2" value="">
   </div><br><br>
   @endif
 
 
 
-  @if ($param == 'gender')
+  @if ($param == 'gender2')
   <div class="form-item form-item__gender">
     <span>性別</span><br>
     <label>女の子
-    <input type="radio" class="form-gender__f" name="gender" value="f" /></label>
+    <input type="radio" class="form-gender__f" name="gender2" value="f" /></label>
     <label>男の子
-    <input type="radio" class="form-gender__m" name="gender" value="m" checked="checked" /></label>
+    <input type="radio" class="form-gender__m" name="gender2" value="m" checked="checked" /></label>
   </div><br><br>
   @endif
 
 
 
 
-  @if ($param == 'blood')
+  @if ($param == 'blood2')
   <div class="form-item form-item__gender">
     <span>血液型</span><br>
-    <select name="blood">
+    <select name="blood2">
       <option value="0" checked="checked">不明</option>
       <option value="1">A</option>
       <option value="2">B</option>
@@ -525,10 +525,10 @@
 
 
 
-  @if ($param == 'birthOrder')
+  @if ($param == 'birthOrder2')
   <div class="form-item form-item__birthOrder">
     <span>生まれ順</span><br>
-    <select name="birthorder">
+    <select name="birthorder2">
       <option value="1">一番上</option>
       <option value="2" selected="selected">真ん中</option>
       <option value="3">末っ子</option>
@@ -541,10 +541,10 @@
 
 
 
-  @if ($param == 'birth')
+  @if ($param == 'birth2')
   <div class="form-item form-item__birth">
     <span>生年月日</span><br>
-    <select class="form-birthDay__year" name="birthday_y">
+    <select class="form-birthDay__year" name="birthday_y2">
       <option value="">--</option>
       <option value="2018">2018</option>
       <option value="2017">2017</option>
@@ -627,7 +627,7 @@
       <option value="1940">1940</option>
     </select>年
       
-    <select class="form-birthDay__month" name="birthday_m">
+    <select class="form-birthDay__month" name="birthday_m2">
       <option value="">--</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -643,7 +643,7 @@
       <option value="12">12</option>
     </select>月
 
-    <select  class="form-birthDay__day" name="birthday_d">
+    <select  class="form-birthDay__day" name="birthday_d2">
       <option value="">--</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -683,8 +683,8 @@
 
 
 
-  @if ($param == 'birthTime')
-  <div class="form-item form-item__birthTime">
+  @if ($param == 'birthTime2')
+  <div class="form-item form-item__birthTime2">
     <span>出生時間</span><br>
     <select class="form-birthTime__hour">
       <option value="-1" selected="selected">不明</option>
@@ -778,16 +778,16 @@
       <option value="59">59</option>
     </select>分
   </div><br><br>
-  <input type="text" name="birthtime" value="9999">
+  <input type="text" name="birthtime2" value="9999">
   @endif
 
 
 
 
-  @if ($param == 'birthPlace')
+  @if ($param == 'birthPlace2')
   <div class="form-item form-item__birthPlace">
     <span>出生地</span>
-    <select name="from_pref">
+    <select name="from_pref2">
       <option value="614">北海道</option>
       <option value="611">青森県</option>
       <option value="608">岩手県</option>
