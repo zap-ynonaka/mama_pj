@@ -1,0 +1,25 @@
+.register-confirm{
+  p {
+  color: #585858;
+  font-size: 14px;
+  margin: 20px 0px;
+  line-height: 1.71;
+  }
+  &Font {
+    color: #ff8e09;
+  }
+  &Title {
+    color: #1e0111;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #ff8e09;
+    margin-bottom: 12px;
+  }
+  &Return li {
+    color: #585858;
+    line-height: 1.71;
+  }
+  &Font.under {
+    text-decoration: underline;
+  }
+}

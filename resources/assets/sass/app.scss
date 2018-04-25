@@ -30,10 +30,16 @@ section {
   // padding-bottom: 24px;
 }
 
-section.second {
+section.second-space1 {
   background-color: #f7f7f7;
   position: relative;
   padding-top: 52px;
+}
+
+section.second-space2 {
+  background-color: #f7f7f7;
+  position: relative;
+  padding-top: 0px;
 }
 
 .top {
@@ -45,7 +51,7 @@ section.second {
   }
 }
 
-.page-back a {
+.page-back a{
   text-decoration: underline;
   padding: 0px 0px 16px 28px;
   position: relative;
@@ -84,7 +90,6 @@ section.second {
 @import "button/_profile.scss";
 @import "button/_default.scss";
 
-
 @import "title/_base.scss";
 @import "title/_second.scss";
 
@@ -112,4 +117,8 @@ section.second {
 @import "icon/_base.scss";
 
 @import "register/_register.scss";
+@import "register/_confirm.scss";
+@import "register/_complete.scss";
+
+
 

@@ -1,6 +1,5 @@
 .form-child {
-  display: flex; //　ベンダープレフィックス用 
-  display: none;
+  display: flex;
   align-items: center;
   position: relative;
   margin-bottom: 10px;
@@ -11,7 +10,6 @@
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #b4a7a0;
-    padding: 4px;
   }
 
   &__name {
@@ -35,5 +33,3 @@
     margin: auto;
   }
 }
-
-

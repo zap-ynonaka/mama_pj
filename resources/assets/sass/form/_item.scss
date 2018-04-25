@@ -1,12 +1,9 @@
 .form-item {
   &__img {
-    display: flex; //　ベンダープレフィックス用 
-    display: none;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 24px 16px;
-    max-width: 360px;
-    margin: 0 auto;
     button {
       width: 80%;
       padding: 10px;

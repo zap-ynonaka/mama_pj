@@ -20,12 +20,14 @@
     background-color: #ff8e09;
     box-shadow: 0 2px 0 0 #d57300;
     width: 58%;
-    line-height: 48px;
     text-align: center;
     margin: 0 auto;
     color: #ffffff;
     font-size: 16px;
     margin-top: 30px;
+    button {
+      padding: 10px 20px;
+    }
   }
   span {
     font-size: 14px;
