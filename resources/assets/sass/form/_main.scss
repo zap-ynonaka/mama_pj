@@ -2,4 +2,24 @@
   padding-right: 16px;
   padding-left: 16px;
   padding-bottom: 16px;
+
+
+
+  input[type="text"] {
+    appearance: none;
+    display: block;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    height: 35px;
+    padding: 0 8px;
+    line-height: 35px;
+    outline: 0;
+    box-shadow: 0 0 0 transparent;
+    transition-property: box-shadow,border-color,-webkit-box-shadow;
+    transition-timing-function: ease-in-out;
+    transition-duration: .25s;
+  }
 }
+
+
