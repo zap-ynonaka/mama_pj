@@ -1,0 +1,70 @@
+.content-gokigen{
+  &list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    position: relative;
+    z-index: 3;
+    overflow: scroll;
+    span {
+      font-size: 12px;
+      color: #ff8e09;
+    }
+    li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      font-weight: 700;
+      color: #1e0111;
+      position: relative;
+      margin: 10px 12px;
+      &:after {
+        content: "";
+        background-image: url(/images/top/combined-shape.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: -8px;
+        left: -16px;
+      }
+    }
+    div {
+      border: 2px solid #ff8e09;
+      border-radius: 50%;
+      background-color: #FFF;
+      width: 70px;
+      height: 70px;
+      padding: 5px;
+    }
+  }
+  
+  &Content {
+  li {
+    display: none;
+    color: #585858;
+    &.active {display: block;}
+    }
+    a {
+      display: block;
+      text-align: center;
+      color: #ff8e09;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+
+

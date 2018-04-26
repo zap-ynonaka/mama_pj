@@ -1,5 +1,5 @@
-<ul class="sns-share__result">
-  <li><a href="//twitter.jp">メールで送る</a></li>
-  <li><a href="//twitter.jp">Lineで送る</a></li>
-  <li><a href="//twitter.jp">ツィートする</a></li>
+<ul class="second-resultShare">
+  <li class="m-icon"><img src="/images/icon_social/share-mail.png" alt=""><a href="">メールで送る</a></li>
+  <li class="l-icon"><img src="/images/icon_social/share-line.png" alt=""><a href="">LINEで送る</a></li>
+  <li class="t-icon"><img src="/images/icon_social/share-twitter.png" alt=""><a href="">ツイートする</a></li>
 </ul>
