@@ -53,9 +53,13 @@
     background-size: 54px;
     background-repeat: no-repeat;
     background-position: 50%;
-    &.js-child_01 {
-      background-image: url("/images/icon_kids/baby-boy.png");
-    }
+    &.js-child_00 { background-image: url("/images/icon/children/kids_00.png"); }
+    &.js-child_01 { background-image: url("/images/icon_kids/baby-boy.png"); }
+    &.js-child_02 { background-image: url("/images/icon_kids/baby-girl.png"); }
+    &.js-child_03 { background-image: url("/images/icon_kids/boy.png"); }
+    &.js-child_04 { background-image: url("/images/icon_kids/kids-boy.png"); }
+    &.js-child_05 { background-image: url("/images/icon_kids/kids-girl.png"); }
+    &.js-child_06 { background-image: url("/images/icon_kids/kids.png"); }
     
     &::after {
       content: "";

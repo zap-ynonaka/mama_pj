@@ -15,7 +15,7 @@
     border-radius: 50%;
     background-color: #fff;
     position: relative;
-    &:after {
+    &.js-active:after {
       content: "";
       background-image: url(/images/top/combined-shape.png);
       background-repeat: no-repeat;

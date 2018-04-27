@@ -1,0 +1,103 @@
+.favorite-list {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 45px;
+  }
+  &__main {
+    border-top: 1px solid #e7e7e7;
+    li {
+      display: flex;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    a {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      color: #585858;
+      font-weight: 700;
+    }
+    .favorite-list__del {
+      display: none;
+      width: 50px;
+      position: relative;
+    }
+  }
+  &__img {
+    width: 30%;
+  }
+  &__text {
+    flex: 1;
+    padding-left: 8px;
+  }
+}
+
+
+.favo-delete__btn {
+  display: none;
+  &.js-active {
+    display: block;
+  }
+}
+
+
+
+
+.favorite-list__del.js-active {
+  display: block;
+}
+.favorite-list__header .js-favoBtn {
+  display: flex;
+  width: 120px;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 700;
+  color: #ff8e09;
+  font-size: 14px;
+  position: relative;
+  i {
+    display: none;
+    font-style: normal;
+    &.js-active {
+      display: block;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 1px;
+      background-color: #ff8e09;
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+    }
+    &:last-child::after {
+      width: 73px;
+    }
+  }
+}
+
+.favorite-list__del {
+  span {
+    background-color: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  input {
+    display: none;
+    &:checked + span {
+      background-color: #ff8e09;
+    }
+  }
+}

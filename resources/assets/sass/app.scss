@@ -24,7 +24,7 @@ main {
 }
 
 section {
-  padding-top: 120px;
+  padding-top: 108px;
   background-color: #f7f7f7;
   position: relative;
   // padding-bottom: 24px;
@@ -51,22 +51,41 @@ section.second-space2 {
   }
 }
 
-.page-back a{
-  text-decoration: underline;
-  padding: 0px 0px 16px 28px;
-  position: relative;
-  color: #585858;
-  &:before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    border: 0px;
-    border-top: solid 1px #605651;
-    border-right: solid 1px #605651;
-    transform: rotate(-135deg);
-    position: absolute;
-    top: 19%;
-    left: 14px;
+.page-back {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-top: 1px solid #d7d7d7;
+  a{
+    padding: 0px 0px 18px 28px;
+    position: relative;
+    color: #585858;
+    &:before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border: 0px;
+      border-top: solid 1px #605651;
+      border-right: solid 1px #605651;
+      transform: rotate(-135deg);
+      position: absolute;
+      top: 0;
+      bottom: 18px;
+      left: 16px;
+      margin: auto;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 28px;
+      position: absolute;
+      top: 0;
+      right: 2px;
+      bottom: 21px;
+      margin: auto;
+      border-bottom: 1px solid #585858;
+    }
   }
 }
 
@@ -89,6 +108,7 @@ input[type="text"] {
 
 @import "content/_space.scss";
 @import "content/_catch.scss";
+@import "content/_gokigen.scss";
 
 @import "button/_base.scss";
 @import "button/_registration.scss";
@@ -106,6 +126,7 @@ input[type="text"] {
 @import "form/_second.scss";
 @import "form/_check.scss";
 @import "form/_submit.scss";
+@import "form/_complate.scss";
 
 
 @import "list/_article.scss";
@@ -127,5 +148,9 @@ input[type="text"] {
 @import "register/_confirm.scss";
 @import "register/_complete.scss";
 
+@import "guest/_fortune.scss";
 
+@import "favorite/_list.scss";
+
+@import "pager/_base.scss";
 
