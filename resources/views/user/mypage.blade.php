@@ -4,9 +4,9 @@
 <?php $gender_st = ['f' => '女性', 'm' => '男性']; ?>
 <?php $blood_st = [0 => '不明', 1 => 'A', 2 => 'B', 3 => 'O', 4 => 'AB']; ?>
 
-<!-- <h1>マイページ</h1> -->
-<h1 class="title-base"><div><span>マイページ</span></div></h1>
-<section>
+
+<h1 class="title-second__base">マイページ</h1>
+<section class="second-space1">
   <h2 class="title-sub">プロフィール設定</h2>
     <ul class="list-text">
       <li><a href="/user/my_profile">あなたのプロフィール確認・変更</a></li>
@@ -23,13 +23,13 @@
 
   <h2 class="title-sub">その他</h2>
     <ul class="list-text">
-      <li><a href="/user/partner_profile">ログアウト</a></li>
+      <li><a href="/user/logout">ログアウト</a></li>
     </ul>
 </section>
 
-<div class="page-back"><a href="">戻る</a></div>
+<div class="page-back"><a href="/">戻る</a></div>
 
-あなたの情報<br>
+<!-- あなたの情報<br>
 @if(@$nickname)
   {{@$nickname}}さん &nbsp; {{@$gender_st[@$gender]}} &nbsp; {{@$age}}歳 &nbsp; 生年月日 {{date('Y/m/d',strtotime(@$birthday))}} &nbsp;{{(@$birthtime_unknown) ? '時間不明' : @$birthtime}}
   <br>
@@ -90,6 +90,6 @@
 <a href="/user/change_email">メールアドレス変更</a><br>
 <br>
 <a href="/user/change_password">パスワード変更</a><br>
-<br>
+<br> -->
 
 @endsection

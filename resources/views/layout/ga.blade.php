@@ -1,5 +1,7 @@
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106774424-1"></script>
+<script type="text/javascript" src="/js/fingerprint.js"></script>
 <script>
 window.Laravel = window.Laravel || {}
 /**
@@ -21,13 +23,12 @@ Laravel.userCpno = function() {
   var store = JSON.parse(window.localStorage.vuex)
   return store.auth.user.cpno || '';
 }
-// !!! ドメイン確定したら設定する
-/* 
+
 var fingerprint = new Fingerprint({canvas: true}).get();
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments)};
 gtag('js', new Date());
-gtag('config', 'UA-106774424-1', {
+gtag('config', 'UA-118367051-1', {
   'custom_map': {
     'dimension1': 'member',
     'dimension2': 'fingerprint',
@@ -37,5 +38,13 @@ gtag('config', 'UA-106774424-1', {
   'fingerprint': fingerprint,                                         {{-- fingerprint_id --}}
   'cpno': @if($cpno ?? '')'{{$cpno}}'@else Laravel.userCpno() @endif  {{-- 流入元  --}}
 });
-*/
+
+// 画面読み込み後にfingerprint_idタグがあれば値を設定
+(window.onload = function() {
+  var fingerprint_id = document.getElementById('fingerprint_id');
+  if (fingerprint_id) { fingerprint_id.value = fingerprint; }
+})();
 </script>
+
+
+
