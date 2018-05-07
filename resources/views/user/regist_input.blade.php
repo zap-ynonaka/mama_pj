@@ -2,7 +2,7 @@
 @section('content')
 
 
-<script>
+<!-- <script>
   $(function() {
     $('.accordion-btn').on('click',function () {
       $(this).next('.accordion-area').slideToggle();
@@ -40,19 +40,95 @@
       $('.mail_mag-checkbox').toggleClass('active');
     });
   });
-</script>
+</script> -->
 
-<section class="l-section">
-  <div class="l-content">
-    <h3>会員登録</h3>
-    <div class="stepbar">
-      <img src="https://websmart.zappallas.com/web_image?url=http%3a%2f%2fwebpayment%2esmart-srv%2fimage%3fid%3d11310%22%3E">
+<section class="second-space1">
+  <h2 class="title-second__base">新規登録</h2>
+  <div class="content-space__top yellowStripe">
+    <div class="content-catch child1">
+      <h3>無料のユーザー登録で</h3>
+      <span class="content-catch__discription">子どものその日の気分がわかる！<br>
+        占い結果を保存できる！<br>
+        誕生日などの再入力が不要！</sp>
+      </span>
     </div>
+  </div>
+<!-- </section>
 
-    @if ( $error_message ?? '' )<span class="text error">{{$error_message}}</span><br>@endif
+<section> -->
+  <h2 class="title-sub">メールアドレスで登録</h2>
+  <div class="form-register content-space__second">
+    <ul class="form-register__navi">
+      <li><img src="/images/regist/step-1-on.png" alt=""></li>
+      <li><img src="/images/regist/step-2-off.png" alt=""></li>
+      <li><img src="/images/regist/step-3-off.png" alt=""></li>
+    </ul>
+  <div>
 
-    <h6 class="common-color-01">{{$name ?? ''}}</h6>
-    <p class="a-caption"><a class="common-color-02" href="/help/terms">利用規約</a>および<a class="common-color-02" href="http://www.zappallas.com/etc/">プライバシーポリシー</a>に同意のうえ会員登録の方法をお選びください。</p>
+<form id="js-generalForm" method="post" action="/user/regist_mailsend">
+    {{ csrf_field() }}
+    <input type="hidden" name="sns" value="{{$sns ?? 'none'}}">
+    <input type="hidden" name="twitter_id" value="{{$twitter_id ?? ''}}">
+    <input type="hidden" name="facebook_id" value="{{$facebook_id ?? ''}}">
+    <input type="hidden" name="google_id" value="{{$google_id ?? ''}}">
+    <input type="hidden" name="yahoo_id" value="{{$yahoo_id ?? ''}}">
+
+  @if ( $notSend ?? '' != 1)
+  <div class="form-register__mail">
+    <span>メールアドレス入力</span>
+    <input id="email" type="email" value="{{$email ?? ''}}" name="email" class="form-register__input" placeholder="例）macomo@mamauranai.co.jp"/>
+    <input id="email_e" type="hidden" name="email_e" value="" />
+    <p>利用規約およびプライバシーポリシーに同意のうえ会員登録方法をお選びください。</p>
+    <div id="error-email"></div>
+
+    <div>
+      <span>パスワード設定</span>
+      <div id="">
+        <input type="password" id="password" name="password" class="form-register__input" placeholder="例）macomo@mamauranai.co.jp" required>
+        <!-- <input id="show-pass" type="checkbox" /><label for="show-pass" class="common-bg-01">パスワードを<br>表示</label></div> -->
+        <div id="error-password"></div>
+
+        <!-- <ul class="a-caption common-color-02">
+        <li>半角英数字8文字以上で登録してください。</li>
+        <li>次回ログイン時に利用しますので大切に保管してください。</li></ul> -->
+      </div>
+       <!-- <p class="mail_mag-checkbox active"><input name="mail_mag" id="receive-btn" type="checkbox" value="1" checked/><label for="receive-btn">最新情報を受け取る</label></p> -->
+      @endif
+      <input type="hidden" name="query_string" value="{$query_string}">
+      @if (isset($query_string_array)) @foreach ($query_string_array as $k => $v)
+      <input type="hidden" name="{{$k ?? ''}}" value="{{$v ?? ''}}" />
+      @endforeach @endif
+
+      <div class="form-register__button">
+        <button type="submit" class="" onclick="document.forms[0].elements['email_e'].value=encodeURIComponent(document.forms[0].elements['email'].value);">
+      @if ( $notSend ?? '' != 1)
+          <div class="submit-btn">確認メールを送信</div>
+      @endif
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+@if ( $error_message ?? '' )<span class="text error">{{$error_message}}</span><br>@endif
+
+<!-- </section> -->
+
+
+
+<!-- <section class="l-section"> -->
+  <!-- <div class="l-content"> -->
+    <!-- <h3>会員登録</h3> -->
+    <!-- <div class="stepbar">
+      <img src="https://websmart.zappallas.com/web_image?url=http%3a%2f%2fwebpayment%2esmart-srv%2fimage%3fid%3d11310%22%3E">
+    </div> -->
+
+    <!-- @if ( $error_message ?? '' )<span class="text error">{{$error_message}}</span><br>@endif -->
+
+    <!-- <h6 class="common-color-01">{{$name ?? ''}}</h6>
+    <p class="a-caption"><a class="common-color-02" href="/help/terms">利用規約</a>および<a class="common-color-02" href="http://www.zappallas.com/etc/">プライバシーポリシー</a>に同意のうえ会員登録の方法をお選びください。</p> -->
 
 
     @if (($sns ?? '') == 'yahoo')
@@ -74,17 +150,17 @@
     @endif
 
 
-    <div class="subheading">
+    <!-- <div class="subheading">
       <span>メールアドレスで会員登録</span>
-    </div>
+    </div> -->
 
-    <div class="accordion-btn accordion-off">
+    <!-- <div class="accordion-btn accordion-off">
       <div class="socialButton__image"><i class="material-icons" style="color: #AAA;line-height:44px;">&#xE0BE;</i></div>
       <span>メールアドレス・パスワード入力</span>
-    </div>
+    </div> -->
 
-    <div class="accordion-area" style="display: none;">
-      <form id="js-generalForm" method="post" action="/user/regist_mailsend">
+    <!-- <div class="accordion-area" style="display: none;"> -->
+      <!-- <form id="js-generalForm" method="post" action="/user/regist_mailsend">
         {{ csrf_field() }}
         <input type="hidden" name="sns" value="{{$sns ?? 'none'}}">
         <input type="hidden" name="twitter_id" value="{{$twitter_id ?? ''}}">
@@ -124,44 +200,48 @@
         @endif
           </button>
         </div>
-      </form>
-    </div>
+      </form> -->
+    <!-- </div> -->
 
     @if (($sns ?? '') == 'none' || ($sns ?? '') == '')
 
-    <div class="subheading">
-      <span>ソーシャルアカウントで会員登録</span>
-    </div>
+    <h2 class="title-sub outerside">ソーシャルアカウントで登録</h2>
 
-    <div class="l-row socialButtonGroup">
-      <div class="g-signin" id="signinButton" data-callback="signinCallback" data-clientid="{{$googleplusClientId ?? ''}}" data-cookiepolicy="{{$g_cookiepolicy ?? ''}}" data-requestvisibleactions="http://schemas.google.com/AddActivity" data-scope="email" onclick="ga('send', 'event', 'cv2', 'click', '{{$name ?? ''}}/google', true);">
-        <div class="socialButton__image"><img src="https://websmart.zappallas.com/web_image?url=http%3a%2f%2fwebpayment%2esmart%2dsrv%2fimage%3fid%3d11287" alt="Googleでログイン" width="36" height="36"></div>
-      </div>
-
-      <div class="sns-signin" scope="email" onclick="authenticateWithFacebook();">
-        <div class="socialButton__image"><img src="https://websmart.zappallas.com/web_image?url=http%3a%2f%2fwebpayment%2esmart%2dsrv%2fimage%3fid%3d11286" alt="Facebookでログイン" width="36" height="36"></div>
-      </div>
-
-      <div class="sns-signin" onclick="authenticateWithTwitter();">
-        <div class="socialButton__image"><img src="https://websmart.zappallas.com/web_image?url=http%3a%2f%2fwebpayment%2esmart%2dsrv%2fimage%3fid%3d11294" alt="Twitterでログイン" width="36" height="36"></div>
-      </div>
-
-      <a class="sns-signin" href="https://auth.login.yahoo.co.jp/yconnect/v1/authorization?response_type=code&redirect_uri={{$yahooRegisterUrl ?? ''}}&client_id={{$yahooAppId ?? ''}}&scope=openid+email&bail=1" onclick="ga('send', 'event', 'cv2', 'click', '{{$name ?? ''}}/yahoo', true);">
-        <div class="socialButton__image"><img src="https://websmart.zappallas.com/web_image?url=http%3a%2f%2fwebpayment%2esmart%2dsrv%2fimage%3fid%3d11295" alt="Yahoo!JAPAN IDでログイン" width="36" height="36"></div>
-      </a>
-    </div>
-    @endif
-
+<div class="form-register__social">
+  <div class="form-register__socialWrapper g-icon g-signin" id="signinButton" data-callback="signinCallback" data-clientid="{{$googleplusClientId ?? ''}}" data-cookiepolicy="{{$g_cookiepolicy ?? ''}}" data-requestvisibleactions="http://schemas.google.com/AddActivity" data-scope="email">
+    <div class="form-register__socialImage"><img src="/images/icon_social/ico-google.png" alt="Googleでログイン"></div>
+    <div class="form-register__socialtext">googleで登録</div>
   </div>
-</section>
 
-<div class="m-alert">
-  <div class="l-content">
-    <h6>すでにアカウントをお持ちのかたはこちら</h6>
-    <a href="/user/login?{{$login_query_string ?? ''}}" class="a-button a-button--default a-button--block">ログイン</a>
+  <div class="form-register__socialWrapper f-icon" scope="email" onclick="authenticateWithFacebook();">
+    <div class="form-register__socialImage"><img src="/images/icon_social/ico-facebook.png" alt="Facebookでログイン"></div>
+    <div class="form-register__socialtext">facebookで登録</div>
+  </div>
+
+  <div class="form-register__socialWrapper t-icon" onclick="authenticateWithTwitter();">
+    <div class="form-register__socialImage"><img src="/images/icon_social/ico-twitter.png" alt="Twitterでログイン"></div>
+    <div class="form-register__socialtext">twitterで登録</div>
+  </div>
+
+  <div class="form-register__socialWrapper y-icon">
+    <a href="https://auth.login.yahoo.co.jp/yconnect/v1/authorization?response_type=code&redirect_uri={{$yahooRegisterUrl ?? ''}}&client_id={{$yahooAppId ?? ''}}&scope=openid+email&bail=1">
+      <div class="form-register__socialImage"><img src="/images/icon_social/ico-yahoo.png" alt="Yahoo!JAPAN IDでログイン"></div></a>
+      <div class="form-register__socialtext">Yahoo!で登録</div>
   </div>
 </div>
+@endif
 
+  <!-- </div> -->
+<div class="form-register__login outerside">
+    <h2 class="title-sub">すでにアカウントをお持ちの方はこちら</h2>
+    <div class="button-default">
+      <a href="/user/login?{{$login_query_string ?? ''}}" class="">ログインページへ</a>
+    </div>
+</div>
+
+<div class="page-back outerside"><a href="">戻る</a></div>
+
+</section>
 
 
 

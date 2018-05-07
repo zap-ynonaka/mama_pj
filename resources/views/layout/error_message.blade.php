@@ -1,7 +1,7 @@
 @if (isset($error_message))
 <div class="alert" data-color="error">
   <h5 class="alert__title">
-    <i class="material-icons">&#xE000;</i>
+    <!-- <i class="material-icons">&#xE000;</i> -->
     <span>{{$error_title ?? ''}}</span>
   </h5>
   @if (isset($error_code) && $error_code)

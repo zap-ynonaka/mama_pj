@@ -6,7 +6,6 @@
 <body>
   @include('layout.app.header_second')
 <main>
-
 <div id="app">
   <app-container>
     @yield('content')
@@ -14,5 +13,7 @@
 </div>
 
 </main>
+
+@include('layout.app.footer')
 </body>
 </html>

@@ -3,6 +3,13 @@
 
 <center>ユーザー一覧</center><br>
 
+  <form action="/admin/users" >
+id:<input type="text" name="id" value="{{@$id}}">
+email:<input type="text" name="email" value="{{@$email}}">
+ニックネーム:<input type="text" name="nickname" value="{{@$nickname}}">
+    <input type="submit" name="btn_search" value="検索">
+  </form>
+<br><br>
 
 @if(@$users)
 <table>
@@ -15,7 +22,7 @@
 <tbody>
   @foreach (@$users as $u)
 
-  <tr><td>{{@$u->id}}</td><td>{{@$u->email}}</td><td>{{@$u->nickname}}</td><td>{{@$u->birthday}}</td></tr>
+  <tr><td>{{@$u->id}}</td><td>{{@$u->email}}</td><td>{{@$u->nickname}}</td></tr>
 
   @endforeach
 </tbody>

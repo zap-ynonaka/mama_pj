@@ -14,6 +14,7 @@ affinity:{{$affinity}}<br>
 <br>
 <form action="/contents/profile_input/{{$menus_id}}" method="post">
   <input type="hidden" name="callbackurl" value="{{$callbackurl}}">
+  <input type="hidden" name="fingerprint_id" id="fingerprint_id">{{-- 値はjsで設定 --}}
 
   @if($elem == 2)
     <?php $params = ['nickname', 'name']; ?>

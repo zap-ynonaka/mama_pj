@@ -1,9 +1,32 @@
 @extends('layout.app.master')
 
 @section('content')
-<div class="contentBody">
+
+
+<section class="second-space2">
+  <div class="content-space__second">
+    <h1 class="title-sub outerside">メールアドレス変更完了</h1>
+      <div class="form-register">
+        <div class="form-complate">
+          <div class="form-complate__message">
+          ご入力いただいたメールアドレスへの変更が完了しました。
+          </div>
+          <div class="form-register__button">
+            <a class="btn"
+              href="/user/login"
+              data-color="white"
+              data-block="true"
+            >ログインページへ</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- <div class="contentBody">
   <div class="contentBody__section">
-    <h1 class="pageTitle">メールアドレスの変更完了</h1>
+    <h1 class="pageTitle">メールアドレス変更完了</h1>
     <p>
       ご入力いただいたメールアドレスへの変更が完了しました。<br>
       改めてログインしてください。<br>
@@ -16,8 +39,8 @@
     href="/user/login"
     data-color="white"
     data-block="true"
-  >ログイン</a>
-</div>
+  >ログインページへ</a>
+</div> -->
 @endsection
 
 @section('script')
