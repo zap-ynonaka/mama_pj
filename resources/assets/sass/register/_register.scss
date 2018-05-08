@@ -5,6 +5,10 @@
   }
   &__mail {
     margin: 24px 0px;
+    a {
+      color: #585858;
+      text-decoration: underline;
+    }
   }
   &__input {
     width: 100%;
@@ -14,19 +18,42 @@
     border: solid 1px #d7d7d7;
     padding: 6px 8px;
     margin: 6px 0px;
+    font-size: 14px;
   }
   &__button {
-    border-radius: 3px;
-    background-color: #ff8e09;
-    box-shadow: 0 2px 0 0 #d57300;
-    width: 58%;
-    text-align: center;
-    margin: 0 auto;
-    color: #ffffff;
-    font-size: 16px;
-    margin-top: 30px;
+    // border-radius: 3px;
+    // background-color: #ff8e09;
+    // box-shadow: 0 2px 0 0 #d57300;
+    // width: 58%;
+    // text-align: center;
+    // margin: 0 auto;
+    // color: #ffffff;
+    // font-size: 16px;
+    // margin-top: 30px;
     button {
       padding: 10px 20px;
+      color: #ffffff;
+      font-size: 16px;
+      width: 58%;
+      display: block;
+      margin: 30px auto;
+      border-radius: 3px;
+      box-shadow: 0 2px 0 0 #d57300;
+      background-color: #ff8e09;
+    } 
+    a{
+      border-radius: 3px;
+      background-color: #ff8e09;
+      box-shadow: 0 2px 0 0 #d57300;
+      width: 58%;
+      text-align: center;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 16px;
+      margin-top: 30px;
+      padding: 10px 20px;
+      display: block;
+      color: #ffffff;
     }
   }
   span {
@@ -77,7 +104,17 @@
 }
 
 .form-register__login{
-    border-bottom: 1px solid #d7d7d7;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
+.form-register__mailChange{
+  font-size: 14px;
+  margin: 10px 0px 20px 0px;
+  p {
+    color: #ff8e09;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+

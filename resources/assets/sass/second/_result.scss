@@ -1,0 +1,26 @@
+.second-result{
+  &Share {
+    display: flex;
+    max-width: 400px;
+    margin: 30px auto;
+    justify-content: space-between;
+    li{
+      display: flex;
+      border-radius: 2px;
+      align-items: center;
+      padding: 4px 3px;
+      &.m-icon {background-color: #7f8499;}
+      &.l-icon {background-color: #00b900;}
+      &.t-icon {background-color: #4eaee6;}
+    }
+    a {
+      color: #ffffff;
+      font-size: 11px;
+      display: block;
+    }
+    img {
+      width: 24px;
+      margin: 4px;
+    }  
+  }
+}

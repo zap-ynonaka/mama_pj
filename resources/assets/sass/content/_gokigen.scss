@@ -1,70 +1,73 @@
-.content-gokigen{
-  &list {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.content-gokigenlist {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  overflow: scroll;
+  li {
     display: flex;
-    -ms-flex-pack: distribute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
     position: relative;
-    z-index: 3;
-    overflow: scroll;
-    span {
-      font-size: 12px;
-      color: #ff8e09;
-    }
-    li {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      width: 100px;
-      height: 100px;
-      font-weight: 700;
-      color: #1e0111;
-      position: relative;
-      margin: 10px 12px;
-      &:after {
+    &.js-active {
+      div {border: 2px solid #ff8e09;}
+      span {color: #ff8e09;}
+      &::after {
         content: "";
-        background-image: url(/images/top/combined-shape.png);
+        background-image: url("/images/icon/children/combined-shape.png");
         background-repeat: no-repeat;
         background-size: contain;
         display: inline-block;
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 23px;
         position: absolute;
-        top: -8px;
-        left: -16px;
+        top: 0;
+        left: 0;
       }
     }
-    div {
-      border: 2px solid #ff8e09;
-      border-radius: 50%;
-      background-color: #FFF;
-      width: 70px;
-      height: 70px;
-      padding: 5px;
-    }
   }
+  div {
+    border: 1px solid #b4a7a0;
+    border-radius: 50%;
+    background-color: #FFF;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+  }
+  span {
+    font-size: 12px;
+    color: #1e0111;
+  }
+}
   
-  &Content {
+.content-gokigenContent {
+  margin: 24px 0;
   li {
     display: none;
     color: #585858;
-    &.active {display: block;}
-    }
-    a {
-      display: block;
-      text-align: center;
-      color: #ff8e09;
-      font-weight: bold;
-      text-decoration: underline;
-    }
+    &.js-active {display: block;}
+  }
+  a {
+    display: block;
+    text-align: center;
+    color: #ff8e09;
+    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
-
+.content-gokigenList__child {
+  height: 100px;
+  overflow-y :hidden;
+  > div {
+    overflow-x: scroll;
+    width: 700px;
+  }
+  ul {
+    width: 450px;
+    display: flex;
+  }
+}

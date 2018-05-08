@@ -33,3 +33,27 @@
     margin: auto;
   }
 }
+
+.form-child.form-child__new {
+  .form-child__img {
+    position: relative;
+    &::after {
+      content: "NEW";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 2px;
+      bottom: 0;
+      margin: auto;
+      font-size: 14px;
+    }
+  }
+  span {
+    color: #ff0000;
+  }
+}

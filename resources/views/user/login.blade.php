@@ -27,7 +27,7 @@
           <div class="m-formControl__field">
             <input type="password" name="password" id="password" class="form-register__input" placeholder="12345678" required>
           </div>
-          <p class="a-caption"><a class="caution" href="reissue?{{$query_string ?? ''}}">パスワードを忘れた方</a></p>
+          <p class="a-caption"><a class="caution" href="/user/reissue_password">パスワードを忘れた方</a></p>
           <div class="form-register__button">
             <button type="submit" class="">ログイン</button>
           </div>

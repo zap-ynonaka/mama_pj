@@ -1,0 +1,40 @@
+.button-favorite{
+  button{
+  display: flex;
+  position: relative;
+  width: 240px;
+  height: 42px;
+  padding: 10px 0px 10px 22px;
+  margin: 0 auto;
+  justify-content: space-around;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 #ffcd09;
+  background-color: #ffffff;
+  border: solid 1px #ffcd09;
+  color: #1e0111;
+    &:before {
+      content: "";
+      background-size: contain;
+      width: 18px;
+      height: 18px;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      background-image: url("/images/icon_favorite/star-off.png");
+    }
+  }
+  &.js-active button:before{
+    content: "";
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    background-image: url("/images/icon_favorite/star-on.png");
+  }
+}

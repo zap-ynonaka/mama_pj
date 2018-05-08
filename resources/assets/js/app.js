@@ -18,10 +18,8 @@ function gender( e ) {
   $(genderI).on('change', function(){
     if ( $(genderC).val() === 'f' ) {
       $(gender).val('f');
-      console.log('f');
     } else {
       $(gender).val('m');
-      console.log('m');
     }
   });
 }
@@ -35,7 +33,7 @@ function blood( e ) {
   var blood = e + 'input[name=blood]',
       bloodI = e + 'select[name=input-blood]',
       bloodO = e + 'select[name=input-blood] option';
-      console.log(bloodO);
+
   // dtクリックしたinput bloodの内容を切り替え
   for (var i = 0; i < $(bloodO).length; i++ ){
     if( $(blood).val() == i ) {
