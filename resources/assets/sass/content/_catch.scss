@@ -3,32 +3,32 @@
   box-shadow: 0 0 6px 0 rgba(255, 142, 9, 0.7);
   padding: 16px;
   position:relative;
-    &.child1:before{
-      content: "";
-      background-image: url(/images/icon_kids/baby-boy.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: absolute;
-      top: -30px;
-      margin: auto;
-      left: 0px;
-      right: 0px;
-      width: 52px;
-      height: 52px;
-    }
-    &.child3:before{
-      content: "";
-      background-image: url(/images/icon_kids/baby-girl.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: absolute;
-      top: -30px;
-      margin: auto;
-      left: 0px;
-      right: 0px;
-      width: 52px;
-      height: 52px;
-    }
+  &.child1:before{
+    content: "";
+    background-image: url(/images/icon_kids/baby-boy.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -30px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    width: 52px;
+    height: 52px;
+  }
+  &.child3:before{
+    content: "";
+    background-image: url(/images/icon_kids/baby-girl.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -30px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    width: 52px;
+    height: 52px;
+  }
   h3{
     font-size: 18px;
     color: #1e0111;

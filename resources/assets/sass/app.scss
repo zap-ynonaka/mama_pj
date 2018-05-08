@@ -17,6 +17,7 @@ img {display: block;width: 100%;}
 ul, li {list-style-type: none;}
 button{background-color: transparent;border: none;cursor: pointer;outline: none;appearance: none;}
 body{background:#f4f4f4;}
+a{text-decoration: none;}
 
 main {
   max-width: 600px;
@@ -42,6 +43,12 @@ section.second-space2 {
   padding-top: 0px;
 }
 
+section.second-space3 {
+  background-color: #fff;
+  position: relative;
+  padding-top: 108px;
+}
+
 .top {
   &__famillyImg{
     background-image: url(/images/top/topillust.png);
@@ -60,6 +67,7 @@ section.second-space2 {
     padding: 0px 0px 18px 28px;
     position: relative;
     color: #585858;
+    font-size:14px;
     &:before {
       content: '';
       display: block;
@@ -100,8 +108,13 @@ input[type="text"] {
   border: 1px solid #d7d7d7;
 }
 
+h5.alert__title span {
+  padding: 10px 0px;
+  color: #de0000;
+}
 
-@import "base/_base.scss";
+
+// @import "base/_base.scss";
 
 @import "header/_header.scss";
 @import "footer/_footer.scss";
@@ -114,6 +127,7 @@ input[type="text"] {
 @import "button/_registration.scss";
 @import "button/_profile.scss";
 @import "button/_default.scss";
+@import "button/_favorite.scss";
 
 @import "title/_base.scss";
 @import "title/_second.scss";
@@ -139,6 +153,8 @@ input[type="text"] {
 
 @import "second/_selectList.scss";
 @import "second/_login.scss";
+@import "second/_result.scss";
+
 
 @import "nav/_breadcrumb.scss";
 
@@ -154,3 +170,6 @@ input[type="text"] {
 
 @import "pager/_base.scss";
 
+@media screen and (min-width: 600px) {
+  @import "w640/_base.scss";
+}

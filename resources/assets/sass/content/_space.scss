@@ -43,4 +43,20 @@
     position: relative;
     z-index: 1;
   }
+  &__result {
+    padding-top: 40px;
+    background-color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    z-index: 1;
+    &.yellowStripe {
+      content: "";
+      background-image: url(/images/top/bg_stripe4.png);
+      background-repeat: repeat;
+      background-size: auto;
+      width: 100%;
+      padding-bottom: 40px;
+    }
+  }
 }

@@ -423,9 +423,12 @@
 
 
 
-
-
-
+  @if ($param == 'email')
+  <div class="form-item form-item__nickName">
+    <span>メールアドレス</span>
+    <div><input type="text" name="email" value="" placehold="例）macomo@mamauranai.co.jp" /></div>
+  </div>
+  @endif
 
 
 
