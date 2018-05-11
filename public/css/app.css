@@ -31,6 +31,7 @@ button {
 
 body {
   background: #f4f4f4;
+  font-family: -apple-system,Helvetica Neue,Roboto,\\30D2\30E9\30AE\30CE\89D2\30B4 ProN W3,Hiragino Kaku Gothic ProN,Noto Sans Japanese,sans-serif;
 }
 
 a {
@@ -472,8 +473,8 @@ header.header .header-btn__mypage span {
   margin: auto;
   left: 0px;
   right: 0px;
-  width: 52px;
-  height: 52px;
+  width: 68px;
+  height: 68px;
 }
 
 .content-catch.child3:before {
@@ -486,8 +487,8 @@ header.header .header-btn__mypage span {
   margin: auto;
   left: 0px;
   right: 0px;
-  width: 52px;
-  height: 52px;
+  width: 68px;
+  height: 68px;
 }
 
 .content-catch h3 {
@@ -495,7 +496,7 @@ header.header .header-btn__mypage span {
   color: #1e0111;
   text-align: center;
   line-height: 30px;
-  padding: 30px 0px 16px 0px;
+  padding: 30px 0px 24px 0px;
   font-weight: bold;
   background-image: url(/images/top/pick.png);
   background-repeat: no-repeat;
@@ -519,7 +520,7 @@ header.header .header-btn__mypage span {
   left: 0px;
   right: 0px;
   width: 120px;
-  height: 52px;
+  height: 68px;
 }
 
 .content-catch h3 span {
@@ -529,6 +530,8 @@ header.header .header-btn__mypage span {
 
 .content-catch p {
   color: #585858;
+  font-size: 14px;
+  margin-bottom: 24px;
 }
 
 .content-catch ul {
@@ -704,30 +707,45 @@ header.header .header-btn__mypage span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.button-registration div:nth-of-type(1) a {
-  padding: 12px 38px;
+.button-registration div {
+  text-align: center;
+}
+
+.button-registration div a {
   font-size: 16px;
+  display: block;
+  padding: 12px 0 9px 0;
+}
+
+.button-registration div:nth-of-type(1) {
+  width: 43.733333333%;
+}
+
+.button-registration div:nth-of-type(1) a {
   text-decoration: underline;
   color: #ff8e09;
-  display: block;
+}
+
+.button-registration div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .button-registration div:nth-of-type(2) a {
   border-radius: 3px;
   background-color: #ff8e09;
   -webkit-box-shadow: 0 2px 0 0 #d57300;
-  box-shadow: 0 2px 0 0 #d57300;
-  font-size: 16px;
+          box-shadow: 0 2px 0 0 #d57300;
   color: #ffffff;
-  padding: 10px 20px;
-  display: block;
 }
 
 .button-profile {
@@ -1384,15 +1402,15 @@ h3.title-top__base {
       -ms-flex-align: end;
           align-items: flex-end;
   height: 35px;
-  width: 30px;
-  margin-right: 24px;
+  padding-left: 4px;
+  padding-right: 24px;
   margin-bottom: 0;
   color: #141414;
   font-weight: 100;
 }
 
 .form-item__select .form-area > div + span:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 
 .form-item__select .form-area .default {
@@ -1591,6 +1609,7 @@ h3.title-top__base {
 
 .list-article__base li {
   width: 49%;
+  margin-bottom: 16px;
 }
 
 .list-article__base li div img {
@@ -1601,10 +1620,14 @@ h3.title-top__base {
   display: block;
 }
 
+.list-article__base a div {
+  margin-bottom: 8px;
+}
+
 .list-article__base p {
   color: #585858;
-  padding: 8px 16px;
   font-weight: bold;
+  font-size: 13px;
 }
 
 .list-article__pickup a {
@@ -1617,6 +1640,10 @@ h3.title-top__base {
 
 .list-article__base li.pickup a {
   position: relative;
+}
+
+.list-article__base li.pickup p {
+  font-size: 15px;
 }
 
 .list-recommend__base {
@@ -1719,15 +1746,17 @@ h3.title-top__base {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 16px 0;
 }
 
 .list-category2 li {
-  width: 156px;
-  margin: 16px 6px 0px 0px;
+  width: 48%;
+  margin-bottom: 16px;
 }
 
 .list-category2 li a {
@@ -2126,6 +2155,12 @@ h3.title-top__base {
   display: none;
 }
 
+.guest-fortune .form-area {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .favorite-list {
   padding-top: 0;
 }
@@ -2346,6 +2381,17 @@ h3.title-top__base {
 @media screen and (min-width: 600px) {
   .content-gokigenList__child > div {
     width: 480px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .list-article__base p {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .form-item__select .form-area > div + span {
+    padding-right: 8px;
   }
 }
 

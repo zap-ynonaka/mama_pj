@@ -16,7 +16,7 @@
 img {display: block;width: 100%;}
 ul, li {list-style-type: none;}
 button{background-color: transparent;border: none;cursor: pointer;outline: none;appearance: none;}
-body{background:#f4f4f4;}
+body{background:#f4f4f4;font-family: -apple-system,Helvetica Neue,Roboto,\\30D2\30E9\30AE\30CE\89D2\30B4 ProN W3,Hiragino Kaku Gothic ProN,Noto Sans Japanese,sans-serif;}
 a{text-decoration: none;}
 
 main {
@@ -170,5 +170,9 @@ h5.alert__title span {
 @import "adviser/_base.scss";
 
 @media screen and (min-width: 600px) {
-  @import "w640/_base.scss";
+  @import "w600/_base.scss";
+}
+
+@media screen and (max-width: 320px) {
+  @import "w320/_base.scss";
 }

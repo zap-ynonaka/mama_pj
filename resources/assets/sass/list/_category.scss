@@ -14,13 +14,13 @@
 }
 
 .list-category2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 0;
   li {
-    width: 156px;
-    margin: 16px 6px 0px 0px;   
+    width: 48%;
+    margin-bottom: 16px;
     a {
       display: block;
       text-align: center;

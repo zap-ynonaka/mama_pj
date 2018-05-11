@@ -1,4 +1,4 @@
-.content-catch{
+.content-catch {
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 6px 0 rgba(255, 142, 9, 0.7);
   padding: 16px;
@@ -13,8 +13,8 @@
     margin: auto;
     left: 0px;
     right: 0px;
-    width: 52px;
-    height: 52px;
+    width: 68px;
+    height: 68px;
   }
   &.child3:before{
     content: "";
@@ -26,15 +26,15 @@
     margin: auto;
     left: 0px;
     right: 0px;
-    width: 52px;
-    height: 52px;
+    width: 68px;
+    height: 68px;
   }
   h3{
     font-size: 18px;
     color: #1e0111;
     text-align: center;
     line-height: 30px;
-    padding: 30px 0px 16px 0px;
+    padding: 30px 0px 24px 0px;
     font-weight: bold;
     background-image: url(/images/top/pick.png);
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@
       left: 0px;
       right: 0px;
       width: 120px;
-      height: 52px;
+      height: 68px;
       }
     }
     span{
@@ -64,6 +64,8 @@
   }
     p {
       color: #585858;
+      font-size: 14px;
+      margin-bottom: 24px;
     }
   
   ul{
