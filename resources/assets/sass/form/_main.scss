@@ -3,8 +3,6 @@
   padding-left: 16px;
   padding-bottom: 16px;
 
-
-
   input[type="text"] {
     appearance: none;
     display: block;
@@ -19,10 +17,15 @@
     transition-property: box-shadow,border-color,-webkit-box-shadow;
     transition-timing-function: ease-in-out;
     transition-duration: .25s;
+    font-size: 14px;
+    &::-webkit-input-placeholder {
+      color: #c1c1c1;
+    }
   }
   &_wrapper {
     background: #FFF;
   }
+
 }
 
 

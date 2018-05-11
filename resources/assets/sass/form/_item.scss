@@ -18,25 +18,32 @@
     margin: 0 auto;
     button {
       width: 80%;
-      padding: 10px;
-      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 36px;
+      font-weight: bold;
+      margin: 0 auto;
+      font-size: 14px;
+      color: #1e0111;
+      border: solid 0.5px #ffcd09;
+      background-color: #ffffff;
+      box-shadow: 0 1px 0 0 #ffcd09;
+      border-radius: 4px;
     }
     > div {
-      width: 86px;
+      width: 72px;
       height: 86px;
       position: relative;
-      
       img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        padding: 8px;
+        opacity: 0.2;
       }
-      &.js-active img:nth-of-type(1) {
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        left: 0;
+      &.js-active img {
+        opacity: 1;
+        border-color: #ff8e0b;
       }
       input {
         display: none;
@@ -91,6 +98,7 @@
         background-image: linear-gradient(180deg,#fff,silver);
         border: 1px solid #4a4b4d;
         border-radius: 18px;
+        margin-right: 9px;
       }
       input:checked {
         background-image: linear-gradient(180deg,#4a4b4d,silver);
@@ -108,6 +116,11 @@
           border-radius: 6px;
           background-color: #efefef;
         }
+      }
+      b {
+        padding-top: 1px;
+        color: #585858;
+        font-weight: 100;
       }
     }
     > div {
@@ -143,7 +156,7 @@
     display: flex;
     > div {
       position: relative;
-      width: 88px;
+      width: 80px;
       height: 30px;
       background: linear-gradient(180deg,#fff,silver);
       border: 1px solid #969696;
@@ -158,6 +171,7 @@
         position: absolute;
         top: -1px;
         right: -1px;
+        box-sizing: border-box;
       }
       &::after{
         content: "";
@@ -174,25 +188,33 @@
         background-color: transparent;
         background-image: none;
         border: none;
-        -webkit-box-shadow: none;
         box-shadow: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
         appearance: none;
         width: inherit;
         height: inherit;
         position: relative;
         z-index: 1;
         padding: 0 0 0 6px;
+        font-size: 14px;
       }
       + span {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        height: 30px;
+        height: 35px;
         width: 30px;
+        margin-right: 24px;
         margin-bottom: 0;
+        color: #141414;
+        font-weight: 100;
+        &:last-child{
+          margin-right: 0;
+        }
       }
+    }
+
+    .default {
+      color: #c1c1c1;
     }
   }
 }

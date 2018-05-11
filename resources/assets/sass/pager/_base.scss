@@ -1,3 +1,41 @@
 .pager-base {
-  padding: 20px 16px;
+  display: flex;
+  height: 44px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 16px 24px 16px;
+  &Right a{
+      padding: 10px 21px;
+      border-radius: 3px;
+      box-shadow: 0 2px 0 0 #ffcd09;
+      background-color: #ffffff;
+      border: solid 1px #ffcd09;
+      font-size: 14px;
+      color: #1e0111;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+  }
+  &Left a{
+      padding: 10px 21px;
+      border-radius: 3px;
+      box-shadow: 0 2px 0 0 #ffcd09;
+      background-color: #ffffff;
+      border: solid 1px #ffcd09;
+      font-size: 14px;
+      color: #1e0111;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+  }
 }
+
+
+
+
+

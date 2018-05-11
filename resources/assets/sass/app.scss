@@ -22,6 +22,7 @@ a{text-decoration: none;}
 main {
   max-width: 600px;
   margin: 0 auto;
+  padding-top: 60px;
 }
 
 section {
@@ -47,15 +48,6 @@ section.second-space3 {
   background-color: #fff;
   position: relative;
   padding-top: 108px;
-}
-
-.top {
-  &__famillyImg{
-    background-image: url(/images/top/topillust.png);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 50% 10px;
-  }
 }
 
 .page-back {
@@ -117,7 +109,11 @@ h5.alert__title span {
 // @import "base/_base.scss";
 
 @import "header/_header.scss";
+
 @import "footer/_footer.scss";
+@import "footer/_terms.scss";
+
+@import "top/_top.scss";
 
 @import "content/_space.scss";
 @import "content/_catch.scss";
@@ -141,6 +137,7 @@ h5.alert__title span {
 @import "form/_check.scss";
 @import "form/_submit.scss";
 @import "form/_complate.scss";
+@import "form/_email.scss";
 
 
 @import "list/_article.scss";
@@ -169,6 +166,8 @@ h5.alert__title span {
 @import "favorite/_list.scss";
 
 @import "pager/_base.scss";
+
+@import "adviser/_base.scss";
 
 @media screen and (min-width: 600px) {
   @import "w640/_base.scss";
