@@ -1,0 +1,28 @@
+.adviser-base{
+  &Image {
+  width: 120px;
+  margin: 0 auto;
+  p {
+  color: #1e0111;
+  font-weight: bold;
+  text-align: center;
+  span {
+    display: block;
+    color: #585858;
+    font-size: 10px;
+    font-weight: normal;
+  }    
+  }
+  }
+  &Text {
+  font-size: 14px;
+  color: #585858;
+  margin-top: 28px;
+  }
+  p {
+    margin: 20px 0px 40px;
+  }
+  span {
+    color: #ff8e09;
+  }
+}

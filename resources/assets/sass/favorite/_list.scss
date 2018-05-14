@@ -1,5 +1,6 @@
 .favorite-list {
   padding-top: 0;
+  background-color: #fff;
   &__header {
     display: flex;
     justify-content: space-between;
@@ -9,6 +10,7 @@
   }
   &__main {
     border-top: 1px solid #e7e7e7;
+    margin-bottom: 24px;
     li {
       display: flex;
       border-bottom: 1px solid #e7e7e7;
@@ -40,6 +42,7 @@
   display: none;
   &.js-active {
     display: block;
+    padding-top: 20px;
   }
 }
 

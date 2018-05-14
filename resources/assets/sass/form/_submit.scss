@@ -17,6 +17,10 @@
       background-color: #ffffff;
       box-shadow: 0 1px 0 0 #ffcd09;
       border-radius: 4px;
+      -webkit-appearance: none;
+    }
+    &.js-active {
+      pointer-events: none;
     }
   }
   &__return {
@@ -37,6 +41,7 @@
       background-color: #ffffff;
       box-shadow: 0 1px 0 0 #ccc;
       border-radius: 4px;
+      -webkit-appearance: none;
     }
   }
   &__submit {
@@ -57,6 +62,7 @@
       background-color: #ffffff;
       box-shadow: 0 1px 0 0 #ffcd09;
       border-radius: 4px;
+      -webkit-appearance: none;
     }
   }
   &__delete {
@@ -77,6 +83,7 @@
       background-color: #ffffff;
       box-shadow: 0 1px 0 0 #ccc;
       border-radius: 4px;
+      -webkit-appearance: none;
     }
   }
   &__back {
@@ -97,7 +104,7 @@
       background-color: #ffffff;
       box-shadow: 0 1px 0 0 #ffcd09;
       border-radius: 4px;
+      -webkit-appearance: none;
     }
   }
 }
-

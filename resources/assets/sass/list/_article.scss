@@ -1,4 +1,4 @@
-.list-article{
+.list-article {
   &__list{
     margin: 0;
     padding:0;
@@ -9,32 +9,36 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    li{
+    li {
       width: 49%;
-      div img{border-radius: 4px;}
+      margin-bottom: 16px;
+      div img { border-radius: 4px; }
     }
-    a{
+    a {
       display: block;
+      div {
+        margin-bottom: 8px;
+      }
     }
-    p{
+    p {
       color: #585858;
-      padding: 8px 16px;
       font-weight: bold;
+      font-size: 13px;
     }
   }
-  &__pickup{
-  a {
-      display: block;
-  }
-
+  &__pickup {
+    a {
+        display: block;
+    }
   }
 }
 
 
 .list-article__base li.pickup {
   width: 100%;
-  a {position: relative;}
+  a { position: relative; }
   p {
+    font-size: 15px;
     // position: absolute;
     // bottom: 0;
     // left: 0;

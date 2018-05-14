@@ -1,0 +1,30 @@
+
+.top {
+  &__famillyImg{
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 50% 10px;
+  }
+}
+
+.top-main {
+  &__message {
+    background-color: #fff;
+    padding: 0;
+    img:nth-of-type(1) {
+      width: 196px;
+      margin: auto;
+      margin-bottom: 24px;
+    }
+    img:nth-of-type(2) {
+      width: 300px;
+      margin: auto;
+    }
+    > div {
+      padding: 17px 0 16px;
+    }
+  }
+}
+
+
+

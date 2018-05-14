@@ -391,7 +391,7 @@
         <select class="form-birthTime__minute" name="input-birthtime_m">
           <option value="-1" selected="selected">不明</option>
           @for ($i = 0; $i <= 59; $i++)
-          <option value="{{ $i }}" @if(@$value['birthtime_m'] == $i) selected="selected" @endif><?php echo sprintf('%02d',$i);  ?></option>
+          <option value="{{ $i }}" @if(@$value['birthtime_m2'] == $i) selected="selected" @endif><?php echo sprintf('%02d',$i);  ?></option>
           @endfor
         </select>
       </div>
