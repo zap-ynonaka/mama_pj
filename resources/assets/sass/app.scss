@@ -55,6 +55,7 @@ section.second-space3 {
   align-items: center;
   height: 80px;
   border-top: 1px solid #d7d7d7;
+  background-color: #fff;
   a{
     padding: 0px 0px 18px 28px;
     position: relative;
@@ -168,6 +169,8 @@ h5.alert__title span {
 @import "pager/_base.scss";
 
 @import "adviser/_base.scss";
+
+@import "unregist/_base.scss";
 
 @media screen and (min-width: 600px) {
   @import "w600/_base.scss";

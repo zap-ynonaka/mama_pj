@@ -220,4 +220,11 @@
   }
 }
 
+.form-item__birth{
+  &Order .form-area > div,
+  &Place .form-area > div
+  {
+  width: 100px;
+  }
+}
 

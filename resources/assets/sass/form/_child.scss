@@ -38,6 +38,7 @@
 .form-child.form-child__new {
   .form-child__img {
     position: relative;
+    img {visibility: hidden;}
     &::after {
       content: "NEW";
       display: flex;
