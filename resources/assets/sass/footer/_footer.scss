@@ -3,17 +3,18 @@
   text-align:center;
   ul {
     display: inline-flex;
-    justify-content: center;
-    text-align: center;
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   li {
-    min-width: 120px;
     position: relative;
-    margin: 10px;
+    margin-bottom: 10px;
     a {
-      color: #555;
+      color: #585858;
+      font-size: 13px;
+      display: block;
+      padding: 0 24px;
     }
     &:nth-of-type(2n):after {
       content: "";
@@ -23,7 +24,7 @@
       background-color: #585857;
       position: absolute;
       top: 0;
-      left: -12px;
+      left: 0;
       bottom: 0;
       margin: auto;
     }
@@ -35,6 +36,8 @@
     justify-content: center;
     align-items: center;
     height: 40px;
+    font-weight: 100;
+    font-size: 12px;
   }
   &-supervision{
     a{

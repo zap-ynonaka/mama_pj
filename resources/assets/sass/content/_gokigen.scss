@@ -64,10 +64,22 @@
   overflow-y :hidden;
   > div {
     overflow-x: scroll;
-    width: 700px;
   }
   ul {
-    width: 450px;
     display: flex;
   }
+}
+
+
+
+.content-gokigenList__child.children_4 > div,
+.content-gokigenList__child.children_5 > div {
+  width: 700px;
+}
+
+.content-gokigenList__child.children_4 ul {
+  width: 360px;
+}
+.content-gokigenList__child.children_5 ul {
+  width: 450px;
 }

@@ -251,23 +251,24 @@ header.header .header-btn__mypage span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer li {
-  min-width: 120px;
   position: relative;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .footer li a {
-  color: #555;
+  color: #585858;
+  font-size: 13px;
+  display: block;
+  padding: 0 24px;
 }
 
 .footer li:nth-of-type(2n):after {
@@ -278,7 +279,7 @@ header.header .header-btn__mypage span {
   background-color: #585857;
   position: absolute;
   top: 0;
-  left: -12px;
+  left: 0;
   bottom: 0;
   margin: auto;
 }
@@ -296,6 +297,8 @@ header.header .header-btn__mypage span {
       -ms-flex-align: center;
           align-items: center;
   height: 40px;
+  font-weight: 100;
+  font-size: 12px;
 }
 
 .footer-supervision a {
@@ -411,7 +414,7 @@ header.header .header-btn__mypage span {
   content: "";
   background-image: url(/images/top/bg_stripe4.png);
   background-repeat: repeat;
-  background-size: auto;
+  background-size: 128px;
   width: 100%;
   padding-bottom: 40px;
 }
@@ -513,14 +516,14 @@ header.header .header-btn__mypage span {
   background-image: url(/images/icon_kids/kids-boy.png), url(/images/icon_kids/kids-girl.png);
   background-position: 0px 0px,60px 0px,60px 0px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 51px;
   position: absolute;
-  top: -50px;
+  top: -30px;
   margin: auto;
   left: 0px;
   right: 0px;
   width: 120px;
-  height: 68px;
+  height: 51px;
 }
 
 .content-catch h3 span {
@@ -663,14 +666,25 @@ header.header .header-btn__mypage span {
 
 .content-gokigenList__child > div {
   overflow-x: scroll;
-  width: 700px;
 }
 
 .content-gokigenList__child ul {
-  width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.content-gokigenList__child.children_4 > div,
+.content-gokigenList__child.children_5 > div {
+  width: 700px;
+}
+
+.content-gokigenList__child.children_4 ul {
+  width: 360px;
+}
+
+.content-gokigenList__child.children_5 ul {
+  width: 450px;
 }
 
 .button-base {
@@ -732,6 +746,7 @@ header.header .header-btn__mypage span {
 .button-registration div:nth-of-type(1) a {
   text-decoration: underline;
   color: #ff8e09;
+  font-weight: bold;
 }
 
 .button-registration div:nth-of-type(2) {
@@ -746,6 +761,7 @@ header.header .header-btn__mypage span {
   -webkit-box-shadow: 0 2px 0 0 #d57300;
           box-shadow: 0 2px 0 0 #d57300;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .button-profile {
@@ -876,7 +892,7 @@ h1.title-top__base:after {
   bottom: 0px;
   margin: auto;
   top: -20px;
-  border-bottom: solid 3px #FF8E08;
+  border-bottom: solid 2px #FF8E08;
   width: 140px;
   height: 1px;
   right: 0;
@@ -1137,6 +1153,7 @@ h3.title-top__base {
   display: block;
   font-weight: 700;
   margin-bottom: 4px;
+  font-size: 14px;
 }
 
 .form-item input {
@@ -2129,6 +2146,7 @@ h3.title-top__base {
 
 .register-confirmReturn li {
   color: #585858;
+  font-size: 14px;
   line-height: 1.71;
 }
 
