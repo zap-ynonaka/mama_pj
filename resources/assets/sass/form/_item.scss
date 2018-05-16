@@ -81,6 +81,9 @@
       right: -6px;
     }
   }
+  &__birthPlace {
+    margin-bottom: 48px;
+  }
 }
 
 
@@ -224,7 +227,7 @@
   &Order .form-area > div,
   &Place .form-area > div
   {
-  width: 100px;
+  width: 110px;
   }
 }
 
