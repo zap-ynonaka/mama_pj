@@ -1,6 +1,9 @@
 .favorite-list {
   padding-top: 0;
   background-color: #fff;
+  &__wrapper {
+    background: #fff;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
@@ -11,9 +14,11 @@
   &__main {
     border-top: 1px solid #e7e7e7;
     margin-bottom: 24px;
+    overflow: hidden;
     li {
       display: flex;
       border-bottom: 1px solid #e7e7e7;
+      position: relative;
     }
     a {
       display: flex;
@@ -21,11 +26,19 @@
       align-items: center;
       color: #585858;
       font-weight: 700;
+      &.js-active{
+        position: relative;
+        left: -40px;
+      }
     }
     .favorite-list__del {
       display: none;
       width: 50px;
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: 0 auto;
     }
   }
   &__img {

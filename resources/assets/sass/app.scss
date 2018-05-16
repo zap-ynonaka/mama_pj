@@ -176,6 +176,7 @@ h5.alert__title span {
   @import "w600/_base.scss";
 }
 
-@media screen and (max-width: 320px) {
+// もともと３２０で作っていたがandroidの画面サイズの都合で変更
+@media screen and (max-width: 360px) {
   @import "w320/_base.scss";
 }
